@@ -17,6 +17,8 @@ namespace Homework_6._2
       {
          string fileEnter = "parable.txt";
          string pathEnter = Path.GetFullPath(fileEnter);
+         string intermediateFile = "intermediate.txt";
+         string pathIntermediate = Path.GetFullPath(intermediateFile);
          string fileInput = "finish.txt";
          string pathInput = Path.GetFullPath(fileInput);
 
