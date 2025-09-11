@@ -23,13 +23,13 @@ namespace Homework_6._2
          string fileInput = "finish.txt";
          string pathInput = Path.GetFullPath(fileInput);
 
-         string text = "Hello world, welcome to the universe. Hello again!";
-         string oldWord = "Hello";
-         string newWord = "Hi";
+         string text = "Привет, мир, добро пожаловать во вселенную. Привет снова!";
+         string oldWord = "Привет";
+         string newWord = "Здравствуй";
 
          string result = ReplaceWord(text, oldWord, newWord);
          Console.WriteLine(result);
-         // Output: "Hi world, welcome to the universe. Hi again!"
+         // "Здравствуй, мир, добро пожаловать во вселенную. Здравствуй снова!"
 
          Console.ReadKey();
       }
