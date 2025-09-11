@@ -34,7 +34,6 @@ namespace Homework_6._2
          Console.ReadKey();
       }
 
-
       public static string ReplaceWord(string input, string oldWord, string newWord)
       {
          // Проверка на пустые входные данные
@@ -83,6 +82,5 @@ namespace Homework_6._2
          // Проверка, является ли символ частью слова (буква, цифра или underscore)
          return char.IsLetterOrDigit(c) || c == '_';
       }
-
    }
 }
