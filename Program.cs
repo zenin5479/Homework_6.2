@@ -26,7 +26,7 @@ namespace Homework_6._2
          string text = "Привет, мир, добро пожаловать во вселенную. Привет снова!";
          string oldWord = "Привет";
          string newWord = "Здравствуй";
-
+         Console.WriteLine(text);
          string result = ReplaceWord(text, oldWord, newWord);
          Console.WriteLine(result);
 
