@@ -22,8 +22,6 @@ namespace Homework_6._2
          string fileInput = "finish.txt";
          string pathInput = Path.GetFullPath(fileInput);
 
-
-
          Console.ReadKey();
       }
    }
