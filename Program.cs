@@ -29,7 +29,7 @@ namespace Homework_6._2
 
          string result = ReplaceWord(text, oldWord, newWord);
          Console.WriteLine(result);
-         // "Здравствуй, мир, добро пожаловать во вселенную. Здравствуй снова!"
+         // "Здравствуй, мир, добро пожаловавселенную. Здравствуй снова!"
 
          Console.ReadKey();
       }
