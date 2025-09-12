@@ -24,6 +24,7 @@ namespace Homework_6._2
          string pathInput = Path.GetFullPath(fileInput);
 
          string text = "Привет, мир, добро пожаловать во вселенную. Привет снова!";
+         Console.WriteLine(text);
          string oldWord = "Привет";
          string newWord = "Здравствуй";
          Console.WriteLine(text);
