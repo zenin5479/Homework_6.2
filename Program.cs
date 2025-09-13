@@ -81,7 +81,12 @@ namespace Homework_6._2
       private static bool IsWordChar(char c)
       {
          // Проверка, является ли символ частью слова (буква, цифра или underscore)
-         return char.IsLetterOrDigit(c) || c == '_';
+         if (char.IsLetterOrDigit(c) || c == '_')
+         {
+            return true;
+         }
+
+         return false;
       }
    }
 }
