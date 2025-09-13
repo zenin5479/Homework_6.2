@@ -37,7 +37,9 @@ namespace Homework_6._2
       {
          // Проверка на пустые входные данные
          if (string.IsNullOrEmpty(input) || string.IsNullOrEmpty(oldWord))
+         {
             return input;
+         }
 
          StringBuilder result = new StringBuilder();
          int currentIndex = 0;
