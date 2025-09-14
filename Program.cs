@@ -23,10 +23,9 @@ namespace Homework_6._2
          string fileInput = "finish.txt";
          string pathInput = Path.GetFullPath(fileInput);
 
-         string text = "Привет, мир, добро пожаловать во вселенную. Привет снова!";
-         Console.WriteLine(text);
-         string oldWord = "Привет";
-         string newWord = "Здравствуй";
+        
+         string oldWord = "один";
+         string newWord = "два";
          string[] result = ReplaceWord(pathEnter, oldWord, newWord);
          InputArrayString(result);
 
