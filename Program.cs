@@ -23,7 +23,7 @@ namespace Homework_6._2
          string fileInput = "finish.txt";
          string pathInput = Path.GetFullPath(fileInput);
 
-        
+
          string oldWord = "один";
          string newWord = "два";
          string[] result = ReplaceWord(pathEnter, oldWord, newWord);
