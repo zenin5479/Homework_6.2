@@ -56,21 +56,6 @@ namespace Homework_6._2
                break;
             }
 
-            
-
-            if (isStartBoundary && isEndBoundary)
-            {
-               // Замена слова
-               result.Append(input, currentIndex, foundIndex - currentIndex);
-               result.Append(newWord);
-               currentIndex = foundIndex + wordLength;
-            }
-            else
-            {
-               // Пропускаем неполное совпадение
-               result.Append(input, currentIndex, foundIndex - currentIndex + 1);
-               currentIndex = foundIndex + 1;
-            }
          }
 
          return result.ToString();
