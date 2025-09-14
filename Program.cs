@@ -34,12 +34,7 @@ namespace Homework_6._2
 
       public static string ReplaceWord(string input, string oldWord, string newWord)
       {
-         // Проверка на пустые входные данные
-         if (string.IsNullOrEmpty(input) || string.IsNullOrEmpty(oldWord))
-         {
-
-         }
-         return input;
+         return null;
       }
    }
 }
