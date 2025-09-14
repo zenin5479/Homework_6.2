@@ -99,7 +99,7 @@ namespace Homework_6._2
                   else
                   {
                      string subLine = stringModified.ToString();
-                     arrayString[сolumn] = Convert.ToDouble(subLine);
+                     arrayString[сolumn] = subLine;
                      //Console.Write(arrayDouble[сolumn] + " ");
                      stringModified.Clear();
                      сolumn++;
@@ -108,7 +108,7 @@ namespace Homework_6._2
                   if (symbolСount == stroka.Length - 1)
                   {
                      string subLine = stringModified.ToString();
-                     arrayString[сolumn] = Convert.ToDouble(subLine);
+                     arrayString[сolumn] = subLine;
                      //Console.Write(arrayDouble[сolumn]);
                      stringModified.Clear();
                      сolumn++;
