@@ -56,9 +56,7 @@ namespace Homework_6._2
                break;
             }
 
-            // Проверка границ слова
-            bool isStartBoundary = foundIndex == 0 || !IsWordChar(input[foundIndex - 1]);
-            bool isEndBoundary = foundIndex + wordLength == input.Length || !IsWordChar(input[foundIndex + wordLength]);
+            
 
             if (isStartBoundary && isEndBoundary)
             {
@@ -76,17 +74,6 @@ namespace Homework_6._2
          }
 
          return result.ToString();
-      }
-
-      private static bool IsWordChar(char c)
-      {
-         // Проверка, является ли символ частью слова (буква, цифра или underscore)
-         if (char.IsLetterOrDigit(c) || c == '_')
-         {
-            return true;
-         }
-
-         return false;
       }
    }
 }
