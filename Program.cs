@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Text;
 
 // Обработка текста
 // Дан текст. Текст разбит на слова, предполагается, что слово – это группа символов,
@@ -38,27 +37,9 @@ namespace Homework_6._2
          // Проверка на пустые входные данные
          if (string.IsNullOrEmpty(input) || string.IsNullOrEmpty(oldWord))
          {
-            return input;
-         }
-
-         StringBuilder result = new StringBuilder();
-         int currentIndex = 0;
-         int wordLength = oldWord.Length;
-
-         while (currentIndex < input.Length)
-         {
-            // Поиск следующего вхождения oldWord
-            int foundIndex = input.IndexOf(oldWord, currentIndex, StringComparison.Ordinal);
-            if (foundIndex == -1)
-            {
-               // Если вхождений больше нет, добавляем остаток строки и выходим
-               result.Append(input, currentIndex, input.Length - currentIndex);
-               break;
-            }
 
          }
-
-         return result.ToString();
+         return input;
       }
    }
 }
