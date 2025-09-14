@@ -16,7 +16,7 @@ namespace Homework_6._2
    {
       static void Main(string[] args)
       {
-         string fileEnter = "parable.txt";
+         string fileEnter = "spisok.txt";
          string pathEnter = Path.GetFullPath(fileEnter);
          string intermediateFile = "intermediate.txt";
          string pathIntermediate = Path.GetFullPath(intermediateFile);
