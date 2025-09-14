@@ -60,7 +60,7 @@ namespace Homework_6._2
          }
          else
          {
-            StreamReader streamReader = new StreamReader(filestream, Encoding.Default);
+            StreamReader streamReader = new StreamReader(filestream, Encoding.UTF8);
             while (streamReader.Peek() >= 0)
             {
                stroka = streamReader.ReadLine();
