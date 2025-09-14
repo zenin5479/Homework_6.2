@@ -37,7 +37,7 @@ namespace Homework_6._2
       {
 
          string stroka = null;
-         string[] arrayDouble = { };
+         string[] arrayString = { };
          FileStream filestream = File.Open(path, FileMode.Open, FileAccess.Read);
          if (filestream == null || filestream.Length == 0)
          {
@@ -83,7 +83,7 @@ namespace Homework_6._2
                // Разделение строки на подстроки по пробелу и конвертация подстрок в double
                //Console.WriteLine("Массив вещественных чисел {0}:", nameArray);
                // Одномерный массив вещественных чисел
-               arrayDouble = new double[сolumn];
+               arrayString = new string[сolumn];
                // Построитель строк
                StringBuilder stringModified = new StringBuilder();
                // Счетчик символов обнуляем
@@ -99,7 +99,7 @@ namespace Homework_6._2
                   else
                   {
                      string subLine = stringModified.ToString();
-                     arrayDouble[сolumn] = Convert.ToDouble(subLine);
+                     arrayString[сolumn] = Convert.ToDouble(subLine);
                      //Console.Write(arrayDouble[сolumn] + " ");
                      stringModified.Clear();
                      сolumn++;
@@ -108,7 +108,7 @@ namespace Homework_6._2
                   if (symbolСount == stroka.Length - 1)
                   {
                      string subLine = stringModified.ToString();
-                     arrayDouble[сolumn] = Convert.ToDouble(subLine);
+                     arrayString[сolumn] = Convert.ToDouble(subLine);
                      //Console.Write(arrayDouble[сolumn]);
                      stringModified.Clear();
                      сolumn++;
@@ -122,7 +122,7 @@ namespace Homework_6._2
             //Console.WriteLine();
          }
 
-         return arrayDouble;
+         return arrayString;
       }
    }
 }
