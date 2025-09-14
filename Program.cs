@@ -44,11 +44,11 @@ namespace Homework_6._2
          }
          else
          {
-            StreamReader streamReader = new StreamReader(filestream);
+            StreamReader streamReader = new StreamReader(filestream, Encoding.Default);
             while (streamReader.Peek() >= 0)
             {
                stroka = streamReader.ReadLine();
-               //Console.WriteLine(stroka);
+               Console.WriteLine(stroka);
             }
 
             // Определение количества столбцов в строке разделением строки на подстроки по пробелу
