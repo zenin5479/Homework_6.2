@@ -28,7 +28,7 @@ namespace Homework_6._2
          string oldWord = "Привет";
          string newWord = "Здравствуй";
          string[] result = ReplaceWord(pathEnter, oldWord, newWord);
-         Console.WriteLine(result);
+         InputArrayString(result);
 
          Console.ReadKey();
       }
@@ -127,7 +127,7 @@ namespace Homework_6._2
 
       public static void InputArrayString(string[] inputArray)
       {
-         Console.WriteLine("Массив вещественных чисел для проведения поиска:");
+         Console.WriteLine("Массив строк:");
          int i = 0;
          while (i < inputArray.Length)
          {
