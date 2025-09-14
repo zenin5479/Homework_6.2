@@ -29,7 +29,23 @@ namespace Homework_6._2
          string[] result = ReplaceWord(pathEnter, oldWord, newWord);
          InputArrayString(result);
 
+         DetectEncodingWithBom(fileEnter);
+
          Console.ReadKey();
+      }
+
+      public static Encoding DetectEncodingWithBom(string filePath)
+      {
+         using (var stream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.Read))
+         {
+            using (var reader = new StreamReader(stream, Encoding.UTF8, true))
+            {
+               // Прочитаем первый символ, чтобы инициировать обнаружение кодировки
+               reader.Peek();
+               // Текущая кодировка reader'а будет установлена в обнаруженную
+               return reader.CurrentEncoding;
+            }
+         }
       }
 
       public static string[] ReplaceWord(string path, string oldWord, string newWord)
