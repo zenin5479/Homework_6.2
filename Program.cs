@@ -124,5 +124,21 @@ namespace Homework_6._2
 
          return arrayString;
       }
+
+      public static string[] InputArrayString(string[] inputArray, int n)
+      {
+         Console.WriteLine("Массив вещественных чисел для проведения поиска:");
+         string[] outputArray = new string[n];
+         int i = 0;
+         while (i < n)
+         {
+            outputArray[i] = inputArray[i];
+            Console.Write("{0} ", outputArray[i]);
+            i++;
+         }
+
+         Console.WriteLine();
+         return outputArray;
+      }
    }
 }
