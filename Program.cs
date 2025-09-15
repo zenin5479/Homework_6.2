@@ -29,8 +29,6 @@ namespace Homework_6._2
          InputArrayString(result);
 
          Console.ReadKey();
-
-
       }
 
       public static string[] ReplaceWord(string path, string oldWord, string newWord)
@@ -103,7 +101,7 @@ namespace Homework_6._2
                   {
                      string subLine = stringModified.ToString();
                      arrayString[column] = subLine;
-                     Console.Write(arrayString[column] + " ");
+                     Console.Write(arrayString[column] + " "); // ???
                      stringModified.Clear();
                      column++;
                   }
@@ -128,11 +126,9 @@ namespace Homework_6._2
             }
 
             Console.WriteLine();
-
          }
 
          return arrayString;
-
       }
 
       public static void InputArrayString(string[] inputArray)
