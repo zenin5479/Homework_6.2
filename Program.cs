@@ -29,12 +29,18 @@ namespace Homework_6._2
          InputArrayString(result);
 
          Console.ReadKey();
+
+         // Одномерный массив строк
+         string[] arrayString = { };
+
       }
 
       public static string[] ReplaceWord(string path, string oldWord, string newWord)
       {
-         // Одномерный массив строк
-         string[] arrayString = { };
+
+
+         // Двумерный массив вещественных чисел
+         string[,] arrayString = { };
          // Чтение файла за одну операцию
          string[] allLines = File.ReadAllLines(path);
          if (allLines == null)
@@ -86,7 +92,7 @@ namespace Homework_6._2
             // Разделение строки на подстроки по пробелу и конвертация подстрок в double
             //Console.WriteLine("Двухмерный числовой массив");
             StringBuilder stringModified = new StringBuilder();
-            arrayString = new string[allLines.Length];
+            arrayString = new double[allLines.Length, sizeArray.Length];
             char spaceCharacter = ' ';
             int row = 0;
             int column = 0;
@@ -101,7 +107,7 @@ namespace Homework_6._2
                      if (spaceCharacter == line[countCharacter])
                      {
                         string subLine = stringModified.ToString();
-                        arrayString[row, column] = subLine;
+                        arrayString[row, column] = Convert.ToDouble(subLine);
                         //Console.Write(arrayDouble[row, column] + " ");
                         stringModified.Clear();
                         column++;
