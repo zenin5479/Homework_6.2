@@ -30,14 +30,13 @@ namespace Homework_6._2
 
          Console.ReadKey();
 
-         //// Одномерный массив строк
-         //string[] arrayString = { };
+       
       }
 
       public static string[] ReplaceWord(string path, string oldWord, string newWord)
       {
-         // Двумерный массив массив строк
-         string[,] arrayString = { };
+         // Одномерный массив строк
+         string[] arrayString = { };
          // Чтение файла за одну операцию
          string[] allLines = File.ReadAllLines(path);
          if (allLines == null)
@@ -79,7 +78,7 @@ namespace Homework_6._2
                   countSymbol++;
                }
 
-               sizeArray[countRow] = countСolumn;
+               sizeArray = countСolumn;
                //Console.WriteLine("В строке {0} количество столбцов {1}", countRow, countСolumn);
                countСolumn = 0;
                countRow++;
@@ -89,7 +88,7 @@ namespace Homework_6._2
             // Разделение строки на подстроки по пробелу и конвертация подстрок в double
             //Console.WriteLine("Двухмерный числовой массив");
             StringBuilder stringModified = new StringBuilder();
-            arrayString = new string[allLines.Length, sizeArray.Length];
+            arrayString = new string[allLines.Length];
             char spaceCharacter = ' ';
             int row = 0;
             int column = 0;
