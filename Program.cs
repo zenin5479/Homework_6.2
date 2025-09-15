@@ -30,16 +30,13 @@ namespace Homework_6._2
 
          Console.ReadKey();
 
-         // Одномерный массив строк
-         string[] arrayString = { };
-
+         //// Одномерный массив строк
+         //string[] arrayString = { };
       }
 
       public static string[] ReplaceWord(string path, string oldWord, string newWord)
       {
-
-
-         // Двумерный массив вещественных чисел
+         // Двумерный массив массив строк
          string[,] arrayString = { };
          // Чтение файла за одну операцию
          string[] allLines = File.ReadAllLines(path);
