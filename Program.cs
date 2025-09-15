@@ -33,94 +33,107 @@ namespace Homework_6._2
 
       public static string[] ReplaceWord(string path, string oldWord, string newWord)
       {
-
-         string stroka = null;
-         string[] arrayString = { };
-         FileStream filestream = File.Open(path, FileMode.Open, FileAccess.Read);
-         if (filestream == null || filestream.Length == 0)
+         // Двумерный массив вещественных чисел
+         double[,] arrayDouble = { };
+         // Чтение файла за одну операцию
+         string[] allLines = File.ReadAllLines(path);
+         if (allLines == null)
          {
             Console.WriteLine("Ошибка при открытии файла для чтения");
          }
          else
          {
-            StreamReader streamReader = new StreamReader(filestream, Encoding.UTF8);
-            while (streamReader.Peek() >= 0)
+            //Console.WriteLine("Исходный массив строк");
+            int indexLines = 0;
+            while (indexLines < allLines.Length)
             {
-               stroka = streamReader.ReadLine();
-               Console.WriteLine(stroka);
+               allLines[indexLines] = allLines[indexLines];
+               //Console.WriteLine(allLines[indexLines]);
+               indexLines++;
             }
 
-            // Определение количества столбцов в строке разделением строки на подстроки по пробелу
-            // Символ пробела
+            // Разделение строки на подстроки по пробелу для определения количества столбцов в строке
+            int[] sizeArray = new int[allLines.Length];
             char symbolSpace = ' ';
-            // Счетчик символов
-            int symbolСount = 0;
-            // Количество столбцов в строке
-            int сolumn = 0;
-            if (stroka != null)
+            int countRow = 0;
+            int countSymbol = 0;
+            int countСolumn = 0;
+            while (countRow < allLines.Length)
             {
-               //Console.WriteLine("Исходный строковый массив {0}:", nameArray);
-               //Console.WriteLine(stroka);
-               while (symbolСount < stroka.Length)
+               string line = allLines[countRow];
+               while (countSymbol < line.Length)
                {
-                  if (symbolSpace == stroka[symbolСount])
+                  if (symbolSpace == line[countSymbol])
                   {
-                     сolumn++;
+                     countСolumn++;
                   }
 
-                  if (symbolСount == stroka.Length - 1)
+                  if (countSymbol == line.Length - 1)
                   {
-                     сolumn++;
+                     countСolumn++;
                   }
 
-                  symbolСount++;
+                  countSymbol++;
                }
 
-               //Console.WriteLine("Количество столбцов {0}:", сolumn);
-
-               // Разделение строки на подстроки по пробелу и конвертация подстрок в double
-               //Console.WriteLine("Массив вещественных чисел {0}:", nameArray);
-               // Одномерный массив вещественных чисел
-               arrayString = new string[сolumn];
-               // Построитель строк
-               StringBuilder stringModified = new StringBuilder();
-               // Счетчик символов обнуляем
-               symbolСount = 0;
-               // Количество столбцов в строке обнуляем
-               сolumn = 0;
-               while (symbolСount < stroka.Length)
-               {
-                  if (symbolSpace != stroka[symbolСount])
-                  {
-                     stringModified.Append(stroka[symbolСount]);
-                  }
-                  else
-                  {
-                     string subLine = stringModified.ToString();
-                     arrayString[сolumn] = subLine;
-                     //Console.Write(arrayDouble[сolumn] + " ");
-                     stringModified.Clear();
-                     сolumn++;
-                  }
-
-                  if (symbolСount == stroka.Length - 1)
-                  {
-                     string subLine = stringModified.ToString();
-                     arrayString[сolumn] = subLine;
-                     //Console.Write(arrayDouble[сolumn]);
-                     stringModified.Clear();
-                     сolumn++;
-                  }
-
-                  symbolСount++;
-               }
+               sizeArray[countRow] = countСolumn;
+               //Console.WriteLine("В строке {0} количество столбцов {1}", countRow, countСolumn);
+               countСolumn = 0;
+               countRow++;
+               countSymbol = 0;
             }
 
-            streamReader.Close();
-            //Console.WriteLine();
+            // Разделение строки на подстроки по пробелу и конвертация подстрок в double
+            //Console.WriteLine("Двухмерный числовой массив");
+            StringBuilder stringModified = new StringBuilder();
+            arrayDouble = new double[allLines.Length, sizeArray.Length];
+            char spaceCharacter = ' ';
+            int row = 0;
+            int column = 0;
+            int countCharacter = 0;
+            while (row < arrayDouble.GetLength(0))
+            {
+               string line = allLines[row];
+               while (column < sizeArray[row])
+               {
+                  while (countCharacter < line.Length)
+                  {
+                     if (spaceCharacter == line[countCharacter])
+                     {
+                        string subLine = stringModified.ToString();
+                        arrayDouble[row, column] = Convert.ToDouble(subLine);
+                        //Console.Write(arrayDouble[row, column] + " ");
+                        stringModified.Clear();
+                        column++;
+                     }
+                     else
+                     {
+                        stringModified.Append(line[countCharacter]);
+                     }
+
+                     if (countCharacter == line.Length - 1)
+                     {
+                        string subLine = stringModified.ToString();
+                        arrayDouble[row, column] = Convert.ToDouble(subLine);
+                        //Console.Write(arrayDouble[row, column]);
+                        stringModified.Clear();
+                        column++;
+                     }
+
+                     countCharacter++;
+                  }
+
+                  countCharacter = 0;
+               }
+
+               //Console.WriteLine();
+               column = 0;
+               row++;
+            }
          }
 
-         return arrayString;
+         return arrayDouble;
+
       }
 
       public static void InputArrayString(string[] inputArray)
