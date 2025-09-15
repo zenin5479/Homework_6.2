@@ -34,7 +34,7 @@ namespace Homework_6._2
       public static string[] ReplaceWord(string path, string oldWord, string newWord)
       {
          // Двумерный массив вещественных чисел
-         double[,] arrayDouble = { };
+         string[] arrayDouble = { };
          // Чтение файла за одну операцию
          string[] allLines = File.ReadAllLines(path);
          if (allLines == null)
