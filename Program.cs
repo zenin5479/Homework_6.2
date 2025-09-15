@@ -93,7 +93,7 @@ namespace Homework_6._2
             int row = 0;
             int column = 0;
             int countCharacter = 0;
-            while (row < arrayString.GetLength(0))
+            while (row < arrayString.Length)
             {
                string line = allLines[row];
                while (column < sizeArray[row])
