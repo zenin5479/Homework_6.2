@@ -33,8 +33,8 @@ namespace Homework_6._2
 
       public static string[] ReplaceWord(string path, string oldWord, string newWord)
       {
-         // Двумерный массив вещественных чисел
-         string[] arrayDouble = { };
+         // Одномерный массив строк
+         string[] arrayString = { };
          // Чтение файла за одну операцию
          string[] allLines = File.ReadAllLines(path);
          if (allLines == null)
@@ -86,12 +86,12 @@ namespace Homework_6._2
             // Разделение строки на подстроки по пробелу и конвертация подстрок в double
             //Console.WriteLine("Двухмерный числовой массив");
             StringBuilder stringModified = new StringBuilder();
-            arrayDouble = new string[allLines.Length];
+            arrayString = new string[allLines.Length];
             char spaceCharacter = ' ';
             int row = 0;
             int column = 0;
             int countCharacter = 0;
-            while (row < arrayDouble.GetLength(0))
+            while (row < arrayString.GetLength(0))
             {
                string line = allLines[row];
                while (column < sizeArray[row])
@@ -101,7 +101,7 @@ namespace Homework_6._2
                      if (spaceCharacter == line[countCharacter])
                      {
                         string subLine = stringModified.ToString();
-                        arrayDouble[row, column] = subLine;
+                        arrayString[row, column] = subLine;
                         //Console.Write(arrayDouble[row, column] + " ");
                         stringModified.Clear();
                         column++;
@@ -114,7 +114,7 @@ namespace Homework_6._2
                      if (countCharacter == line.Length - 1)
                      {
                         string subLine = stringModified.ToString();
-                        arrayDouble[row, column] = Convert.ToDouble(subLine);
+                        arrayString[row, column] = Convert.ToDouble(subLine);
                         //Console.Write(arrayDouble[row, column]);
                         stringModified.Clear();
                         column++;
@@ -132,7 +132,7 @@ namespace Homework_6._2
             }
          }
 
-         return arrayDouble;
+         return arrayString;
 
       }
 
