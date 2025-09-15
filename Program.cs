@@ -30,7 +30,7 @@ namespace Homework_6._2
 
          Console.ReadKey();
 
-       
+
       }
 
       public static string[] ReplaceWord(string path, string oldWord, string newWord)
@@ -45,17 +45,17 @@ namespace Homework_6._2
          }
          else
          {
-            //Console.WriteLine("Исходный массив строк");
+            Console.WriteLine("Исходный массив строк");
             int indexLines = 0;
             while (indexLines < allLines.Length)
             {
                allLines[indexLines] = allLines[indexLines];
-               //Console.WriteLine(allLines[indexLines]);
+               Console.WriteLine(allLines[indexLines]);
                indexLines++;
             }
 
             // Разделение строки на подстроки по пробелу для определения количества столбцов в строке
-            int sizeArray;
+            int sizeArray = 0;
             char symbolSpace = ' ';
             int countRow = 0;
             int countSymbol = 0;
@@ -79,59 +79,56 @@ namespace Homework_6._2
                }
 
                sizeArray = countСolumn;
-               //Console.WriteLine("В строке {0} количество столбцов {1}", countRow, countСolumn);
+               Console.WriteLine("В строке {0} количество столбцов {1}", countRow, countСolumn);
                countСolumn = 0;
                countRow++;
                countSymbol = 0;
             }
 
             // Разделение строки на подстроки по пробелу и конвертация подстрок в double
-            //Console.WriteLine("Одномерный строковый массив");
+            Console.WriteLine("Одномерный строковый массив");
             StringBuilder stringModified = new StringBuilder();
             arrayString = new string[allLines.Length];
             char spaceCharacter = ' ';
             int row = 0;
             int column = 0;
             int countCharacter = 0;
-            while (row < arrayString.Length)
+
+            string lines = allLines[row];
+            while (column < sizeArray)
             {
-               string line = allLines[row];
-               while (column < sizeArray[row])
+               while (countCharacter < lines.Length)
                {
-                  while (countCharacter < line.Length)
+                  if (spaceCharacter == lines[countCharacter])
                   {
-                     if (spaceCharacter == line[countCharacter])
-                     {
-                        string subLine = stringModified.ToString();
-                        arrayString[row, column] = subLine;
-                        //Console.Write(arrayDouble[row, column] + " ");
-                        stringModified.Clear();
-                        column++;
-                     }
-                     else
-                     {
-                        stringModified.Append(line[countCharacter]);
-                     }
-
-                     if (countCharacter == line.Length - 1)
-                     {
-                        string subLine = stringModified.ToString();
-                        arrayString[row, column] = subLine;
-                        //Console.Write(arrayDouble[row, column]);
-                        stringModified.Clear();
-                        column++;
-                     }
-
-                     countCharacter++;
+                     string subLine = stringModified.ToString();
+                     arrayString[column] = subLine;
+                     Console.Write(arrayString[column] + " ");
+                     stringModified.Clear();
+                     column++;
+                  }
+                  else
+                  {
+                     stringModified.Append(lines[countCharacter]);
                   }
 
-                  countCharacter = 0;
+                  if (countCharacter == lines.Length - 1)
+                  {
+                     string subLine = stringModified.ToString();
+                     arrayString[column] = subLine;
+                     Console.Write(arrayString[column]);
+                     stringModified.Clear();
+                     column++;
+                  }
+
+                  countCharacter++;
                }
 
-               //Console.WriteLine();
-               column = 0;
-               row++;
+               countCharacter = 0;
             }
+
+            Console.WriteLine();
+
          }
 
          return arrayString;
