@@ -101,7 +101,7 @@ namespace Homework_6._2
                   {
                      string subLine = stringModified.ToString();
                      arrayString[column] = subLine;
-                     Console.Write(arrayString[column] + " "); // ???
+                     Console.Write(arrayString[column] + " "); // ?
                      stringModified.Clear();
                      column++;
                   }
