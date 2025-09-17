@@ -86,7 +86,8 @@ namespace Homework_6._2
                // Разделение строки на подстроки по пробелу и конвертация подстрок в double
                Console.WriteLine("Одномерный строковый массив");
                StringBuilder stringModified = new StringBuilder();
-               arrayString = new string[allLines.Length];
+               //arrayString = new string[allLines.Length];
+               arrayString = new string[sizeArray];
                char spaceCharacter = ' ';
                int row = 0;
                int column = 0;
