@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Text;
 
 // Обработка текста
 // Дан текст. Текст разбит на слова, предполагается, что слово – это группа символов,
@@ -105,50 +106,49 @@ namespace Homework_6._2
             Console.WriteLine("Максимум равен: {0}", max);
             Console.WriteLine("Минимум равен: {0}", min);
 
-
             //
             // Разделение строки на подстроки по пробелу и конвертация подстрок в double
-            //Console.WriteLine("Одномерный строковый массив");
-            //StringBuilder stringModified = new StringBuilder();
-            ////arrayString = new string[allLines.Length];
-            //string[] arrayLine = new string[sizeArray];
-            //char spaceCharacter = ' ';
-            //int row = 0;
-            //int column = 0;
-            //int countCharacter = 0;
+            Console.WriteLine("Одномерный строковый массив");
+            StringBuilder stringModified = new StringBuilder();
+            arrayString = new string[allLines.Length];
+            string[] arrayLine = new string[sizeArray];
+            char spaceCharacter = ' ';
+            int row = 0;
+            int column = 0;
+            int countCharacter = 0;
 
-            //string lines = allLines[row];
-            //while (column < sizeArray)
-            //{
-            //   while (countCharacter < lines.Length)
-            //   {
-            //      if (spaceCharacter == lines[countCharacter])
-            //      {
-            //         string subLine = stringModified.ToString();
-            //         arrayLine[column] = subLine;
-            //         Console.Write(arrayLine[column] + " "); // ?
-            //         stringModified.Clear();
-            //         column++;
-            //      }
-            //      else
-            //      {
-            //         stringModified.Append(lines[countCharacter]);
-            //      }
+            string lines = allLines[row];
+            while (column < sizeArray)
+            {
+               while (countCharacter < lines.Length)
+               {
+                  if (spaceCharacter == lines[countCharacter])
+                  {
+                     string subLine = stringModified.ToString();
+                     arrayLine[column] = subLine;
+                     Console.Write(arrayLine[column] + " "); // ?
+                     stringModified.Clear();
+                     column++;
+                  }
+                  else
+                  {
+                     stringModified.Append(lines[countCharacter]);
+                  }
 
-            //      if (countCharacter == lines.Length - 1)
-            //      {
-            //         string subLine = stringModified.ToString();
-            //         arrayLine[column] = subLine;
-            //         Console.Write(arrayLine[column]);
-            //         stringModified.Clear();
-            //         column++;
-            //      }
+                  if (countCharacter == lines.Length - 1)
+                  {
+                     string subLine = stringModified.ToString();
+                     arrayLine[column] = subLine;
+                     Console.Write(arrayLine[column]);
+                     stringModified.Clear();
+                     column++;
+                  }
 
-            //      countCharacter++;
-            //   }
-            //   Array.Clear(arrayLine, 0, arrayLine.Length);
-            //   countCharacter = 0;
-            //}
+                  countCharacter++;
+               }
+               Array.Clear(arrayLine, 0, arrayLine.Length);
+               countCharacter = 0;
+            }
             Console.WriteLine();
          }
 
