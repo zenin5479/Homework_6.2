@@ -31,10 +31,10 @@ namespace Homework_6._2
          Console.ReadKey();
       }
 
-      public static string[] ReplaceWord(string path, string oldWord, string newWord)
+      public static string[,] ReplaceWord(string path, string oldWord, string newWord)
       {
          // Одномерный массив строк
-         string[] arrayString = { };
+         string[,] arrayString = { };
          // Чтение файла за одну операцию
          string[] allLines = File.ReadAllLines(path);
          if (allLines == null)
@@ -106,48 +106,54 @@ namespace Homework_6._2
             Console.WriteLine("Максимум равен: {0}", max);
             Console.WriteLine("Минимум равен: {0}", min);
 
-            //
+
+
             // Разделение строки на подстроки по пробелу и конвертация подстрок в double
-            Console.WriteLine("Одномерный строковый массив");
+            //Console.WriteLine("Двухмерный числовой массив");
             StringBuilder stringModified = new StringBuilder();
-            arrayString = new string[allLines.Length];
-            string[] arrayLine = new string[sizeArray];
+            arrayString = new string[allLines.Length, sizeArray.Length];
             char spaceCharacter = ' ';
             int row = 0;
             int column = 0;
             int countCharacter = 0;
-
-            string lines = allLines[row];
-            while (column < sizeArray)
+            while (row < arrayString.GetLength(0))
             {
-               while (countCharacter < lines.Length)
+               string line = allLines[row];
+               while (column < sizeArray[row])
                {
-                  if (spaceCharacter == lines[countCharacter])
+                  while (countCharacter < line.Length)
                   {
-                     string subLine = stringModified.ToString();
-                     arrayLine[column] = subLine;
-                     Console.Write(arrayLine[column] + " "); // ?
-                     stringModified.Clear();
-                     column++;
-                  }
-                  else
-                  {
-                     stringModified.Append(lines[countCharacter]);
+                     if (spaceCharacter == line[countCharacter])
+                     {
+                        string subLine = stringModified.ToString();
+                        arrayString[row, column] = Convert.ToDouble(subLine);
+                        //Console.Write(arrayDouble[row, column] + " ");
+                        stringModified.Clear();
+                        column++;
+                     }
+                     else
+                     {
+                        stringModified.Append(line[countCharacter]);
+                     }
+
+                     if (countCharacter == line.Length - 1)
+                     {
+                        string subLine = stringModified.ToString();
+                        arrayString[row, column] = Convert.ToDouble(subLine);
+                        //Console.Write(arrayDouble[row, column]);
+                        stringModified.Clear();
+                        column++;
+                     }
+
+                     countCharacter++;
                   }
 
-                  if (countCharacter == lines.Length - 1)
-                  {
-                     string subLine = stringModified.ToString();
-                     arrayLine[column] = subLine;
-                     Console.Write(arrayLine[column]);
-                     stringModified.Clear();
-                     column++;
-                  }
-
-                  countCharacter++;
+                  countCharacter = 0;
                }
-               Array.Clear(arrayLine, 0, arrayLine.Length);
-               countCharacter = 0;
+
+               //Console.WriteLine();
+               column = 0;
+               row++;
             }
             Console.WriteLine();
          }
