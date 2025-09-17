@@ -181,7 +181,7 @@ namespace Homework_6._2
 
       public static void InputArrayString(string[] inputArray)
       {
-         Console.WriteLine("Массив строк:");
+         Console.WriteLine("Одномерный массив строк:");
          int i = 0;
          while (i < inputArray.Length)
          {
