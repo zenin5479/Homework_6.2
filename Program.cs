@@ -26,7 +26,7 @@ namespace Homework_6._2
          string oldWord = "один";
          string newWord = "два";
          string[,] result = ReplaceWord(pathEnter, oldWord, newWord);
-         //InputArrayString(result);
+         InputArrayString(result);
 
          Console.ReadKey();
       }
@@ -162,24 +162,53 @@ namespace Homework_6._2
       }
 
 
-      public static void InputArrayString(string[,] inputArray)
+      public static void PrintingArrayDouble(double[,] inputArray)
       {
-         Console.WriteLine("Двумерный массив вещественных чисел");
+         Console.WriteLine("Двумерный числовой массив");
          int i = 0;
          while (i < inputArray.GetLength(0))
          {
             int j = 0;
             while (j < inputArray.GetLength(1))
             {
-               Console.Write("{0} ", inputArray[i, j]);
+               if (j == inputArray.GetLength(1) - 1)
+               {
+                  Console.Write(inputArray[i, j]);
+                  //Console.Write("{0:f}", inputArray[i, j]);
+                  //Console.Write("{0:f2}", inputArray[i, j]);
+               }
+               else
+               {
+                  Console.Write(inputArray[i, j] + " ");
+                  //Console.Write("{0:f} ", inputArray[i, j]);
+                  //Console.Write("{0:f2} ", inputArray[i, j]);
+               }
+
                j++;
             }
 
             i++;
             Console.WriteLine();
          }
-
       }
+
+      //public static void InputArrayString(string[,] inputArray)
+      //{
+      //   Console.WriteLine("Двумерный массив вещественных чисел");
+      //   int i = 0;
+      //   while (i < inputArray.GetLength(0))
+      //   {
+      //      int j = 0;
+      //      while (j < inputArray.GetLength(1))
+      //      {
+      //         Console.Write("{0} ", inputArray[i, j]);
+      //         j++;
+      //      }
+
+      //      i++;
+      //      Console.WriteLine();
+      //   }
+      //}
 
       public static void InputArrayString(string[] inputArray)
       {
