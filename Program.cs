@@ -87,7 +87,7 @@ namespace Homework_6._2
                Console.WriteLine("Одномерный строковый массив");
                StringBuilder stringModified = new StringBuilder();
                //arrayString = new string[allLines.Length];
-               arrayString = new string[sizeArray];
+               string[] arrayLine = new string[sizeArray];
                char spaceCharacter = ' ';
                int row = 0;
                int column = 0;
@@ -101,8 +101,8 @@ namespace Homework_6._2
                      if (spaceCharacter == lines[countCharacter])
                      {
                         string subLine = stringModified.ToString();
-                        arrayString[column] = subLine;
-                        Console.Write(arrayString[column] + " "); // ?
+                        arrayLine[column] = subLine;
+                        Console.Write(arrayLine[column] + " "); // ?
                         stringModified.Clear();
                         column++;
                      }
@@ -114,15 +114,15 @@ namespace Homework_6._2
                      if (countCharacter == lines.Length - 1)
                      {
                         string subLine = stringModified.ToString();
-                        arrayString[column] = subLine;
-                        Console.Write(arrayString[column]);
+                        arrayLine[column] = subLine;
+                        Console.Write(arrayLine[column]);
                         stringModified.Clear();
                         column++;
                      }
 
                      countCharacter++;
                   }
-
+                  Array.Clear(arrayLine, 0, arrayLine.Length);
                   countCharacter = 0;
                }
             }
