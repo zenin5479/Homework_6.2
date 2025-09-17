@@ -124,10 +124,7 @@ namespace Homework_6._2
 
                   countCharacter = 0;
                }
-
             }
-
-
 
             Console.WriteLine();
          }
