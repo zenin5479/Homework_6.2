@@ -25,8 +25,8 @@ namespace Homework_6._2
 
          string oldWord = "один";
          string newWord = "два";
-         string[] result = ReplaceWord(pathEnter, oldWord, newWord);
-         InputArrayString(result);
+         string[,] result = ReplaceWord(pathEnter, oldWord, newWord);
+         //InputArrayString(result);
 
          Console.ReadKey();
       }
