@@ -179,20 +179,6 @@ namespace Homework_6._2
          }
       }
 
-      //   while (i < inputArray.GetLength(0))
-      //   {
-      //      int j = 0;
-      //      while (j < inputArray.GetLength(1))
-      //      {
-      //         Console.Write("{0} ", inputArray[i, j]);
-      //         j++;
-      //      }
-
-      //      i++;
-      //      Console.WriteLine();
-      //   }
-      //}
-
       public static void InputArrayString(string[] inputArray)
       {
          Console.WriteLine("Массив строк:");
