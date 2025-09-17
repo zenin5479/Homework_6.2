@@ -126,7 +126,7 @@ namespace Homework_6._2
                      if (spaceCharacter == line[countCharacter])
                      {
                         string subLine = stringModified.ToString();
-                        arrayString[row, column] = Convert.ToDouble(subLine);
+                        arrayString[row, column] = subLine;
                         //Console.Write(arrayDouble[row, column] + " ");
                         stringModified.Clear();
                         column++;
@@ -139,7 +139,7 @@ namespace Homework_6._2
                      if (countCharacter == line.Length - 1)
                      {
                         string subLine = stringModified.ToString();
-                        arrayString[row, column] = Convert.ToDouble(subLine);
+                        arrayString[row, column] = subLine;
                         //Console.Write(arrayDouble[row, column]);
                         stringModified.Clear();
                         column++;
