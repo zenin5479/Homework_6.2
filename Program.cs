@@ -161,6 +161,31 @@ namespace Homework_6._2
          return arrayString;
       }
 
+
+      public static string[,] InputArrayDouble(string[,] inputArray, int n, int m)
+      {
+         Console.WriteLine("Двумерный массив вещественных чисел");
+         string[,] outputArray = new string[n, m];
+         int i = 0;
+         while (i < n)
+         {
+            int j = 0;
+            while (j < m)
+            {
+               outputArray[i, j] = inputArray[i, j];
+               //Console.Write("{0:f2} ", outputArray[i, j]);
+               //Console.Write("{0:f} ", outputArray[i, j]);
+               Console.Write("{0} ", outputArray[i, j]);
+               j++;
+            }
+
+            i++;
+            Console.WriteLine();
+         }
+
+         return outputArray;
+      }
+
       public static void InputArrayString(string[] inputArray)
       {
          Console.WriteLine("Массив строк:");
