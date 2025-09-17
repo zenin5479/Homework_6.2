@@ -26,7 +26,7 @@ namespace Homework_6._2
          string oldWord = "один";
          string newWord = "два";
          string[,] result = ReplaceWord(pathEnter, oldWord, newWord);
-         InputArrayString(result);
+         PrintingArrayDouble(result);
 
          Console.ReadKey();
       }
@@ -162,7 +162,7 @@ namespace Homework_6._2
       }
 
 
-      public static void PrintingArrayDouble(double[,] inputArray)
+      public static void PrintingArrayDouble(string[,] inputArray)
       {
          Console.WriteLine("Двумерный числовой массив");
          int i = 0;
