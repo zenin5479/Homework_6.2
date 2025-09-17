@@ -179,10 +179,6 @@ namespace Homework_6._2
          }
       }
 
-      //public static void InputArrayString(string[,] inputArray)
-      //{
-      //   Console.WriteLine("Двумерный массив вещественных чисел");
-      //   int i = 0;
       //   while (i < inputArray.GetLength(0))
       //   {
       //      int j = 0;
