@@ -153,7 +153,6 @@ namespace Homework_6._2
          return arrayString;
       }
 
-
       public static void InputArrayString(string[,] inputArray)
       {
          Console.WriteLine("Двумерный массив строк");
