@@ -83,11 +83,9 @@ namespace Homework_6._2
                countSymbol = 0;
             }
 
-            // Поиск максимального и минимального элемента массива
+            // Поиск максимального элемента массива
             // Cчитаем, что максимум - это первый элемент массива
             int max = sizeArray[0];
-            // Cчитаем, что минимум - это первый элемент массива
-            int min = sizeArray[0];
             int columns = 0;
             while (columns < sizeArray.Length)
             {
@@ -104,9 +102,9 @@ namespace Homework_6._2
                columns++;
             }
             Console.WriteLine("Максимум равен: {0}", max);
-            Console.WriteLine("Минимум равен: {0}", min);
 
-            // Разделение строки на подстроки по пробелу
+            // Разделение строк на подстроки по пробелу и заполнение двумерного массива строк
+            // Измерении массива (0) - количество строк, Измерении массива (1) - максимальное количество столбцов 
             Console.WriteLine("Двумерный массив строк");
             StringBuilder stringModified = new StringBuilder();
             arrayString = new string[allLines.Length, max];
