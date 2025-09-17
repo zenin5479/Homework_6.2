@@ -111,7 +111,7 @@ namespace Homework_6._2
             // Разделение строки на подстроки по пробелу и конвертация подстрок в double
             //Console.WriteLine("Двухмерный числовой массив");
             StringBuilder stringModified = new StringBuilder();
-            arrayString = new string[allLines.Length, sizeArray.Length];
+            arrayString = new string[allLines.Length, max];
             char spaceCharacter = ' ';
             int row = 0;
             int column = 0;
@@ -127,7 +127,7 @@ namespace Homework_6._2
                      {
                         string subLine = stringModified.ToString();
                         arrayString[row, column] = subLine;
-                        //Console.Write(arrayDouble[row, column] + " ");
+                        Console.Write(arrayString[row, column] + " ");
                         stringModified.Clear();
                         column++;
                      }
@@ -140,7 +140,7 @@ namespace Homework_6._2
                      {
                         string subLine = stringModified.ToString();
                         arrayString[row, column] = subLine;
-                        //Console.Write(arrayDouble[row, column]);
+                        Console.Write(arrayString[row, column]);
                         stringModified.Clear();
                         column++;
                      }
