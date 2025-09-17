@@ -53,7 +53,7 @@ namespace Homework_6._2
             }
 
             // Разделение строки на подстроки по пробелу для определения количества столбцов в строке
-            int sizeArray = 0;
+            int[] sizeArray;
             char symbolSpace = ' ';
             int countRow = 0;
             int countSymbol = 0;
@@ -81,6 +81,33 @@ namespace Homework_6._2
                countСolumn = 0;
                countRow++;
                countSymbol = 0;
+
+
+
+
+               // Поиск максимального и минимального элемента массива
+               // Cчитаем, что максимум - это первый элемент массива
+               max = inputArray[0];
+               // Cчитаем, что минимум - это первый элемент массива
+               min = inputArray[0];
+               int column = 0;
+               while (column < inputArray.Length)
+               {
+                  if (max < inputArray[column])
+                  {
+                     max = inputArray[column];
+                  }
+
+                  if (min > inputArray[column])
+                  {
+                     min = inputArray[column];
+                  }
+
+                  column++;
+               }
+               //Console.WriteLine("Максимум равен: {0}", max);
+               //Console.WriteLine("Минимум равен: {0}", min);
+
 
                //
                // Разделение строки на подстроки по пробелу и конвертация подстрок в double
