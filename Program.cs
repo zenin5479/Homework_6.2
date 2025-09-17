@@ -12,7 +12,7 @@ using System.Text;
 
 namespace Homework_6._2
 {
-   internal class Program
+   internal class InputArrayDouble
    {
       static void Main(string[] args)
       {
@@ -162,20 +162,16 @@ namespace Homework_6._2
       }
 
 
-      public static string[,] InputArrayDouble(string[,] inputArray)
+      public static void InputArrayString(string[,] inputArray)
       {
          Console.WriteLine("Двумерный массив вещественных чисел");
-         string[,] outputArray = new string[n, m];
          int i = 0;
          while (i < inputArray.GetLength(0))
          {
             int j = 0;
             while (j < inputArray.GetLength(1))
             {
-               outputArray[i, j] = inputArray[i, j];
-               //Console.Write("{0:f2} ", outputArray[i, j]);
-               //Console.Write("{0:f} ", outputArray[i, j]);
-               Console.Write("{0} ", outputArray[i, j]);
+               Console.Write("{0} ", inputArray[i, j]);
                j++;
             }
 
@@ -183,7 +179,6 @@ namespace Homework_6._2
             Console.WriteLine();
          }
 
-         return outputArray;
       }
 
       public static void InputArrayString(string[] inputArray)
