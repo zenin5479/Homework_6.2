@@ -106,10 +106,8 @@ namespace Homework_6._2
             Console.WriteLine("Максимум равен: {0}", max);
             Console.WriteLine("Минимум равен: {0}", min);
 
-
-
-            // Разделение строки на подстроки по пробелу и конвертация подстрок в double
-            //Console.WriteLine("Двухмерный числовой массив");
+            // Разделение строки на подстроки по пробелу
+            Console.WriteLine("Двумерный массив строк");
             StringBuilder stringModified = new StringBuilder();
             arrayString = new string[allLines.Length, max];
             char spaceCharacter = ' ';
