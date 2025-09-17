@@ -53,7 +53,7 @@ namespace Homework_6._2
             }
 
             // Разделение строки на подстроки по пробелу для определения количества столбцов в строке
-            int[] sizeArray;
+            int[] sizeArray = { };
             char symbolSpace = ' ';
             int countRow = 0;
             int countSymbol = 0;
@@ -76,7 +76,7 @@ namespace Homework_6._2
                   countSymbol++;
                }
 
-               sizeArray = countСolumn;
+               sizeArray[countRow] = countСolumn;
                Console.WriteLine("В строке {0} количество столбцов {1}", countRow, countСolumn);
                countСolumn = 0;
                countRow++;
