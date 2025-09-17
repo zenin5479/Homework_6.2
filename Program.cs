@@ -94,13 +94,9 @@ namespace Homework_6._2
                   max = sizeArray[columns];
                }
 
-               if (min > sizeArray[columns])
-               {
-                  min = sizeArray[columns];
-               }
-
                columns++;
             }
+
             Console.WriteLine("Максимум равен: {0}", max);
 
             // Разделение строк на подстроки по пробелу и заполнение двумерного массива строк
