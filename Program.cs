@@ -179,8 +179,6 @@ namespace Homework_6._2
                else
                {
                   Console.Write(inputArray[i, j] + " ");
-                  //Console.Write("{0:f} ", inputArray[i, j]);
-                  //Console.Write("{0:f2} ", inputArray[i, j]);
                }
 
                j++;
