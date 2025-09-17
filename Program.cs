@@ -82,28 +82,25 @@ namespace Homework_6._2
                countRow++;
                countSymbol = 0;
 
-
-
-
                // Поиск максимального и минимального элемента массива
                // Cчитаем, что максимум - это первый элемент массива
-               max = inputArray[0];
+               int max = sizeArray[0];
                // Cчитаем, что минимум - это первый элемент массива
-               min = inputArray[0];
-               int column = 0;
-               while (column < inputArray.Length)
+               int min = sizeArray[0];
+               int columns = 0;
+               while (columns < sizeArray.Length)
                {
-                  if (max < inputArray[column])
+                  if (max < sizeArray[columns])
                   {
-                     max = inputArray[column];
+                     max = sizeArray[columns];
                   }
 
-                  if (min > inputArray[column])
+                  if (min > sizeArray[columns])
                   {
-                     min = inputArray[column];
+                     min = sizeArray[columns];
                   }
 
-                  column++;
+                  columns++;
                }
                //Console.WriteLine("Максимум равен: {0}", max);
                //Console.WriteLine("Минимум равен: {0}", min);
