@@ -161,6 +161,12 @@ namespace Homework_6._2
                   //   arrayString[k, l] = newWord;
                   //}
 
+                  // Сравниваем значения string используя метод Compare(string) регистронезависим
+                  if (string.Compare(arrayString[k, l], oldWord, StringComparison.OrdinalIgnoreCase) == 0)
+                  {
+                     arrayString[k, l] = newWord;
+                  }
+
                   // Сравниваем значения string используя метод Equals(string) регистрозависим
                   //if (Equals(arrayString[k, l], oldWord))
                   //{
@@ -168,10 +174,10 @@ namespace Homework_6._2
                   //}
 
                   // Сравниваем значения string используя метод Equals(string) регистронезависим
-                  if (string.Equals(arrayString[k, l], oldWord, StringComparison.OrdinalIgnoreCase))
-                  {
-                     arrayString[k, l] = newWord;
-                  }
+                  //if (string.Equals(arrayString[k, l], oldWord, StringComparison.OrdinalIgnoreCase))
+                  //{
+                  //   arrayString[k, l] = newWord;
+                  //}
 
                   l++;
                }
