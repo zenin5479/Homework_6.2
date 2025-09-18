@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.IO;
 using System.Text;
 
@@ -162,10 +163,21 @@ namespace Homework_6._2
                   //}
 
                   // Сравниваем значения string используя метод Compare(string) регистронезависим
-                  if (string.Compare(arrayString[k, l], oldWord, StringComparison.OrdinalIgnoreCase) == 0)
+                  if (string.Compare(arrayString[k, l], oldWord) == 0)
                   {
                      arrayString[k, l] = newWord;
                   }
+
+                  int result1 = string.Compare(arrayString[k, l], oldWord); // с учетом регистра и текущей культуры
+                  int result2 = string.Compare(arrayString[k, l], oldWord, StringComparison.OrdinalIgnoreCase); // игнорирование регистра
+                  int result3 = string.Compare(arrayString[k, l], oldWord, CultureInfo.InvariantCulture, CompareOptions.IgnoreNonSpace); // с указанием культуры и опций
+
+
+                  // Сравниваем значения string используя метод Compare(string) игнорирование регистра
+                  //if (string.Compare(arrayString[k, l], oldWord, StringComparison.OrdinalIgnoreCase) == 0)
+                  //{
+                  //   arrayString[k, l] = newWord;
+                  //}
 
                   // Сравниваем значения string используя метод Equals(string) регистрозависим
                   //if (Equals(arrayString[k, l], oldWord))
@@ -173,7 +185,7 @@ namespace Homework_6._2
                   //   arrayString[k, l] = newWord;
                   //}
 
-                  // Сравниваем значения string используя метод Equals(string) регистронезависим
+                  // Сравниваем значения string используя метод Equals(string) игнорирование регистра
                   //if (string.Equals(arrayString[k, l], oldWord, StringComparison.OrdinalIgnoreCase))
                   //{
                   //   arrayString[k, l] = newWord;
