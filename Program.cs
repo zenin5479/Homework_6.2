@@ -147,6 +147,12 @@ namespace Homework_6._2
                column = 0;
                row++;
             }
+
+
+            while ()
+            {
+               
+            }
             Console.WriteLine();
          }
 
