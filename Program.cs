@@ -156,7 +156,7 @@ namespace Homework_6._2
                while (l < arrayString.GetLength(1))
                {
                   // Сравниваем значения string используя метод CompareTo(string) 
-                  if (String.CompareOrdinal(arrayString[k, l], oldWord) == 0)
+                  if (string.Compare(arrayString[k, l], oldWord) == 0)
                   {
                      arrayString[k, l] = newWord;
                   }
