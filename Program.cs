@@ -171,6 +171,7 @@ namespace Homework_6._2
 
                k++;
             }
+
             Console.WriteLine();
          }
 
