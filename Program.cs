@@ -161,12 +161,10 @@ namespace Homework_6._2
                   }
 
                   // Сравниваем значения string используя метод Equals(string)
-                  if (Equals(arrayString[k, l], max))
-                  {
-                     
-                     
-                     arrayString[k, l] = newWord;
-                  }
+                  //if (Equals(arrayString[k, l], max))
+                  //{
+                  //   arrayString[k, l] = newWord;
+                  //}
 
                   l++;
                }
