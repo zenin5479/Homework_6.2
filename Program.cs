@@ -166,8 +166,6 @@ namespace Homework_6._2
                      arrayString[k, l] = newWord;
                   }
 
-
-
                   l++;
                }
 
