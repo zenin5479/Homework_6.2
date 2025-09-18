@@ -154,6 +154,40 @@ namespace Homework_6._2
             {
                while (l < arrayString.GetLength(1))
                {
+                  // Сравниваем значения int используя метод CompareTo(Int) 
+                  if (arrayString[k,l].CompareTo(max) == 0)
+                  {
+                     arrayString[k, l] = inputArray[i];
+                  }
+                  else
+                  {
+                     outputArray[i] = i;
+                  }
+
+                  // Сравниваем значения int используя метод Equals(Int)
+                  //if (inputArray[i].Equals(max))
+                  //{
+                  //   outputArray[i] = inputArray[i];
+                  //}
+                  //else
+                  //{
+                  //   outputArray[i] = i;
+                  //}
+
+                  // Сравниваем значения int используя оператор равенства ==
+                  //if (inputArray[i] == max)
+                  //{
+                  //   outputArray[i] = inputArray[i];
+                  //}
+                  //else
+                  //{
+                  //   outputArray[i] = i;
+                  //}
+
+                  i++;
+
+
+
                   l++;
                }
 
