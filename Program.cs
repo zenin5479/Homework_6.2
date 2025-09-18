@@ -158,17 +158,12 @@ namespace Homework_6._2
                   if (string.Compare(arrayString[k,l], oldWord, StringComparison.Ordinal) == 0)
                   {
                      arrayString[k, l] = newWord;
-                     arrayString[k, l] = arrayString[k, l];
                   }
 
                   // Сравниваем значения int используя метод Equals(Int)
                   if (arrayString[k, l].Equals(max))
                   {
-                     outputArray[i] = inputArray[i];
-                  }
-                  else
-                  {
-                     outputArray[i] = i;
+                     arrayString[k, l] = newWord;
                   }
 
 
