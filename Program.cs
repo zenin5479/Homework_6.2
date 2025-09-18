@@ -165,12 +165,12 @@ namespace Homework_6._2
                   if (Equals(arrayString[k, l], oldWord))
                   {
                      arrayString[k, l] = newWord;
-                     l++;
                   }
 
                   l++;
                }
 
+               l = 0;
                k++;
             }
 
