@@ -152,9 +152,9 @@ namespace Homework_6._2
             int l = 0;
             while (k < arrayString.GetLength(0))
             {
-               while (l < arrayString.GetLength(0))
+               while (l < arrayString.GetLength(1))
                {
-                  
+                  l++;
                }
 
 
