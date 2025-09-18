@@ -168,7 +168,6 @@ namespace Homework_6._2
 
 
 
-
                   l++;
                }
 
