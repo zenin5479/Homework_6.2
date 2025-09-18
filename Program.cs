@@ -154,13 +154,13 @@ namespace Homework_6._2
             {
                while (l < arrayString.GetLength(1))
                {
-                  // Сравниваем значения int используя метод CompareTo(Int) 
+                  // Сравниваем значения string используя метод CompareTo(string) 
                   if (string.Compare(arrayString[k,l], oldWord, StringComparison.Ordinal) == 0)
                   {
                      arrayString[k, l] = newWord;
                   }
 
-                  // Сравниваем значения int используя метод Equals(Int)
+                  // Сравниваем значения string используя метод Equals(string)
                   if (arrayString[k, l].Equals(max))
                   {
                      arrayString[k, l] = newWord;
