@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Globalization;
 using System.IO;
 using System.Text;
 
@@ -163,10 +162,10 @@ namespace Homework_6._2
                   //}
 
                   // Сравниваем значения string используя метод Compare игнорируя регистр
-                  //if (string.Compare(arrayString[k, l], oldWord, StringComparison.OrdinalIgnoreCase) == 0)
-                  //{
-                  //   arrayString[k, l] = newWord;
-                  //}
+                  if (string.Compare(arrayString[k, l], oldWord, StringComparison.OrdinalIgnoreCase) == 0)
+                  {
+                     arrayString[k, l] = newWord;
+                  }
 
                   // Сравниваем значения string используя метод Compare с указанием культуры и опций
                   //if (string.Compare(arrayString[k, l], oldWord, CultureInfo.InvariantCulture, CompareOptions.IgnoreNonSpace) == 0)
