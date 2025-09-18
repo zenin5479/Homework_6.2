@@ -161,7 +161,7 @@ namespace Homework_6._2
                   }
                   else
                   {
-                     arrayString[k, l] = i;
+                     arrayString[k, l] = newWord;
                   }
 
                   // Сравниваем значения int используя метод Equals(Int)
@@ -184,7 +184,6 @@ namespace Homework_6._2
                   //   outputArray[i] = i;
                   //}
 
-                  i++;
 
 
 
