@@ -157,7 +157,7 @@ namespace Homework_6._2
                   l++;
                }
 
-
+               k++;
             }
             Console.WriteLine();
          }
