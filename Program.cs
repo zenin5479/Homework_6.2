@@ -155,13 +155,14 @@ namespace Homework_6._2
                while (l < arrayString.GetLength(1))
                {
                   // Сравниваем значения int используя метод CompareTo(Int) 
-                  if (String.Compare(arrayString[k,l], oldWord, StringComparison.Ordinal) == 0)
+                  if (string.Compare(arrayString[k,l], oldWord, StringComparison.Ordinal) == 0)
                   {
+                     arrayString[k, l] = newWord;
                      arrayString[k, l] = arrayString[k, l];
                   }
                   else
                   {
-                     arrayString[k, l] = newWord;
+                     
                   }
 
                   // Сравниваем значения int используя метод Equals(Int)
