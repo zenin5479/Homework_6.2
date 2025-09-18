@@ -148,10 +148,16 @@ namespace Homework_6._2
                row++;
             }
 
-
-            while ()
+            int k = 0;
+            int l = 0;
+            while (k < arrayString.GetLength(0))
             {
-               
+               while (k < arrayString.GetLength(0))
+               {
+                  
+               }
+
+
             }
             Console.WriteLine();
          }
