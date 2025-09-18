@@ -148,6 +148,7 @@ namespace Homework_6._2
                row++;
             }
 
+            //
             int k = 0;
             int l = 0;
             while (k < arrayString.GetLength(0))
@@ -155,13 +156,13 @@ namespace Homework_6._2
                while (l < arrayString.GetLength(1))
                {
                   // Сравниваем значения string используя метод CompareTo(string) 
-                  if (arrayString[k, l].CompareTo(max) == 0)
+                  if (String.CompareOrdinal(arrayString[k, l], oldWord) == 0)
                   {
                      arrayString[k, l] = newWord;
                   }
 
                   // Сравниваем значения string используя метод Equals(string)
-                  if (Equals(arrayString[k, l], max))
+                  if (Equals(arrayString[k, l], oldWord))
                   {
                      arrayString[k, l] = newWord;
                   }
