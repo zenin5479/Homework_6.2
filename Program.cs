@@ -156,19 +156,19 @@ namespace Homework_6._2
             {
                while (l < arrayString.GetLength(1))
                {
-                  // Сравниваем значения string используя метод CompareTo(string) 
-                  //if (string.CompareOrdinal(arrayString[k, l], oldWord) == 0)
-                  //{
-                  //   arrayString[k, l] = newWord;
-                  //}
+                  // Сравниваем значения string используя метод CompareTo(string) с учетом регистра и текущей культуры
+                  if (string.CompareOrdinal(arrayString[k, l], oldWord) == 0)
+                  {
+                     arrayString[k, l] = newWord;
+                  }
 
-                  // Сравниваем значения string используя метод Compare(string) регистронезависим
+                  // Сравниваем значения string используя метод Compare(string) регистрозависим
                   if (string.Compare(arrayString[k, l], oldWord) == 0)
                   {
                      arrayString[k, l] = newWord;
                   }
 
-                  int result1 = string.Compare(arrayString[k, l], oldWord); // с учетом регистра и текущей культуры
+                  int result1 = string.CompareOrdinal(arrayString[k, l], oldWord); // с учетом регистра и текущей культуры
                   int result2 = string.Compare(arrayString[k, l], oldWord, StringComparison.OrdinalIgnoreCase); // игнорирование регистра
                   int result3 = string.Compare(arrayString[k, l], oldWord, CultureInfo.InvariantCulture, CompareOptions.IgnoreNonSpace); // с указанием культуры и опций
 
