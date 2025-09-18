@@ -160,10 +160,6 @@ namespace Homework_6._2
                      arrayString[k, l] = newWord;
                      arrayString[k, l] = arrayString[k, l];
                   }
-                  else
-                  {
-                     
-                  }
 
                   // Сравниваем значения int используя метод Equals(Int)
                   //if (inputArray[i].Equals(max))
