@@ -50,9 +50,21 @@ namespace Homework_6._2
             while (j < word.Length)
             {
                char c = word[j];
+               int k = 0;
+               while (k < vowels.Length)
+               {
+                  // Сравниваем значения string используя метод Compare игнорируя регистр
+                  if (string.Compare(vowels[k].ToString(), c.ToString()) == 0)
+                  {
+                     currentVowelCount++;
+                  }
+
+                  k++;
+               }
+
                if (vowels.IndexOf(c) != -1)
                {
-                  currentVowelCount++;
+
                }
 
                j++;
