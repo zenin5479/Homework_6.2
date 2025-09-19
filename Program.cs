@@ -12,7 +12,7 @@ using System.Text;
 
 namespace Homework_6._2
 {
-   internal class InputArrayDouble
+   internal class Program
    {
       static void Main(string[] args)
       {
@@ -25,16 +25,16 @@ namespace Homework_6._2
 
          string oldWord = "один";
          string newWord = "два";
-         string[,] result = ReplaceWord(pathEnter, oldWord, newWord);
-         InputArrayString(result);
+         string[,] replace = ReplaceWord(pathEnter, oldWord, newWord);
+         InputArrayString(replace);
          Console.WriteLine();
 
-         string[] words = { "Счастье", "складывается", "из", "мелочей", "а", "не", "из", "одного", "грандиозного", "события" };
-         string results = FindWordWithMostVowels(words);
-         Console.WriteLine("Слово с наибольшим количеством гласных: {0}", results);
+         string[] wordArray = { "Счастье", "складывается", "из", "мелочей", "а", "не", "из", "одного", "грандиозного", "события" };
+         string word = FindWordWithMostVowels(wordArray);
+         Console.WriteLine("Слово с наибольшим количеством гласных: {0}", word);
 
-         string res = FindWordWithMostVowels(result);
-         Console.WriteLine("Слово с наибольшим количеством гласных: {0}", res);
+         string wordsArray = FindWordWithMostVowels(replace);
+         Console.WriteLine("Слово с наибольшим количеством гласных: {0}", wordsArray);
 
          Console.ReadKey();
       }
