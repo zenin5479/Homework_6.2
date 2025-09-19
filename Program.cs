@@ -28,6 +28,10 @@ namespace Homework_6._2
          string[,] result = ReplaceWord(pathEnter, oldWord, newWord);
          InputArrayString(result);
 
+         string[] words = { "пример", "строка", "гласные", "программирование" };
+         string results = FindWordWithMostVowels(words);
+         Console.WriteLine($"Слово с наибольшим количеством гласных: {results}");
+
          Console.ReadKey();
       }
 
@@ -211,8 +215,9 @@ namespace Homework_6._2
          foreach (string word in words)
          {
             int currentVowelCount = 0;
-            foreach (char c in word.ToLower())
+            for (var i = 0; i < word.ToLower().Length; i++)
             {
+               var c = word.ToLower()[i];
                if (vowels.IndexOf(c) != -1)
                {
                   currentVowelCount++;
