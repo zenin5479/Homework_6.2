@@ -29,11 +29,11 @@ namespace Homework_6._2
          InputArrayString(result);
          Console.WriteLine();
 
-         string[] words = { "Счастье", "складывается", "из", "программирование" };
+         string[] words = { "Счастье", "складывается", "из", "мелочей", "а", "складывается", "из", "мелочей" };
 
         
            
-           //  из мелочей, а не из одного грандиозного события.
+           //   не из одного грандиозного события.
          string results = FindWordWithMostVowels(words);
          Console.WriteLine($"Слово с наибольшим количеством гласных: {results}");
 
