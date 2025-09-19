@@ -49,52 +49,59 @@ namespace Homework_6._2
          while (i < words.GetLength(0))
          {
             int j = 0;
-            while (j < words.GetLength(1))
+            while (j < words.GetLength(1) && )
             {
                string word = words[i, j];
                int currentVowelCount = 0;
                int k = 0;
-               while (k < word.Length)
+
+               if (word != null)
                {
-                  string c = word[k].ToString();
-                  int l = 0;
-                  while (l < vowels.Length)
+                  while (k < word.Length)
                   {
-                     // Сравниваем значения string используя метод String.CompareOrdinal с учетом регистра и текущей культуры
-                     if (string.CompareOrdinal(vowels[l].ToString(), c) == 0)
+                     string c = word[k].ToString();
+                     int l = 0;
+                     while (l < vowels.Length)
                      {
-                        currentVowelCount++;
+                        // Сравниваем значения string используя метод String.CompareOrdinal с учетом регистра и текущей культуры
+                        if (string.CompareOrdinal(vowels[l].ToString(), c) == 0)
+                        {
+                           currentVowelCount++;
+                        }
+
+                        // Сравниваем значения string используя метод Compare игнорируя регистр
+                        if (string.Compare(vowels[l].ToString(), c, StringComparison.OrdinalIgnoreCase) == 0)
+                        {
+                           currentVowelCount++;
+                        }
+
+                        // Сравниваем значения string используя метод Equals(string) с учетом регистра
+                        if (Equals(vowels[l].ToString(), c))
+                        {
+                           currentVowelCount++;
+                        }
+
+                        // Сравниваем значения string используя метод Equals(string) игнорируя регистр
+                        if (string.Equals(vowels[l].ToString(), c, StringComparison.OrdinalIgnoreCase))
+                        {
+                           currentVowelCount++;
+                        }
+
+                        l++;
                      }
 
-                     // Сравниваем значения string используя метод Compare игнорируя регистр
-                     if (string.Compare(vowels[l].ToString(), c, StringComparison.OrdinalIgnoreCase) == 0)
-                     {
-                        currentVowelCount++;
-                     }
-
-                     // Сравниваем значения string используя метод Equals(string) с учетом регистра
-                     if (Equals(vowels[l].ToString(), c))
-                     {
-                        currentVowelCount++;
-                     }
-
-                     // Сравниваем значения string используя метод Equals(string) игнорируя регистр
-                     if (string.Equals(vowels[l].ToString(), c, StringComparison.OrdinalIgnoreCase))
-                     {
-                        currentVowelCount++;
-                     }
-
-                     l++;
+                     k++;
                   }
 
-                  k++;
+                  if (currentVowelCount > maxVowelCount)
+                  {
+                     maxVowelCount = currentVowelCount;
+                     bestWord = word;
+                  }
+
                }
 
-               if (currentVowelCount > maxVowelCount)
-               {
-                  maxVowelCount = currentVowelCount;
-                  bestWord = word;
-               }
+
 
                j++;
             }
