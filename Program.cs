@@ -31,7 +31,11 @@ namespace Homework_6._2
 
          string[] words = { "Счастье", "складывается", "из", "мелочей", "а", "не", "из", "одного", "грандиозного", "события" };
          string results = FindWordWithMostVowels(words);
-         Console.WriteLine("Слово с наибольшим количеством гласных:{0}", results);
+         Console.WriteLine("Слово с наибольшим количеством гласных: {0}", results);
+
+
+         string res = FindWordWithMostVowels(result);
+         Console.WriteLine("Слово с наибольшим количеством гласных: {0}", res);
 
          Console.ReadKey();
       }
