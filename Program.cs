@@ -38,7 +38,6 @@ namespace Homework_6._2
 
       public static string FindWordWithMostVowels(string[] words)
       {
-         //string vowels = "аеёиоуыэюяАЕЁИОУЫЭЮЯ";
          char[] vowels = { 'а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я', 'А', 'Е', 'Ё', 'И', 'О', 'У', 'Ы', 'Э', 'Ю', 'Я' };
 
          string bestWord = "";
