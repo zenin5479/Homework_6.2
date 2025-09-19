@@ -192,11 +192,17 @@ namespace Homework_6._2
                k++;
             }
 
+            string[] words = { "пример", "строка", "гласные", "программирование" };
+            string result = FindWordWithMostVowels(words);
+            Console.WriteLine($"Слово с наибольшим количеством гласных: {result}");
+
             Console.WriteLine();
          }
 
          return arrayString;
       }
+
+
 
       public static void InputArrayString(string[,] inputArray)
       {
