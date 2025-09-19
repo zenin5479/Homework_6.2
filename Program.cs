@@ -41,9 +41,21 @@ namespace Homework_6._2
          string vowels = "аеёиоуыэюяАЕЁИОУЫЭЮЯ";
          string bestWord = "";
          int maxVowelCount = -1;
-
-         for (int i = 0; i < words.Length; i++)
+         int i = 0;
+         while (i < words.Length)
          {
+            
+            
+            while ()
+            {
+
+
+
+
+            }
+
+
+
             var word = words[i];
             int currentVowelCount = 0;
             for (int j = 0; j < word.ToLower().Length; j++)
@@ -60,7 +72,14 @@ namespace Homework_6._2
                maxVowelCount = currentVowelCount;
                bestWord = word;
             }
+
+
+
+
+
+            i++;
          }
+
 
          return bestWord;
       }
