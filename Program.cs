@@ -51,11 +51,10 @@ namespace Homework_6._2
             while (j < words.GetLength(1))
             {
                string word = words[i, j];
-               int currentVowelCount = 0;
-               int k = 0;
-
                if (word != null)
                {
+                  int currentVowelCount = 0;
+                  int k = 0;
                   while (k < word.Length)
                   {
                      string c = word[k].ToString();
@@ -99,8 +98,6 @@ namespace Homework_6._2
                   }
 
                }
-
-
 
                j++;
             }
