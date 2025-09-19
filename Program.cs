@@ -58,23 +58,18 @@ namespace Homework_6._2
                j++;
             }
 
-
             if (currentVowelCount > maxVowelCount)
             {
                maxVowelCount = currentVowelCount;
                bestWord = word;
             }
 
-
-
-
-
             i++;
          }
 
-
          return bestWord;
       }
+
       public static string[,] ReplaceWord(string path, string oldWord, string newWord)
       {
          // Одномерный массив строк
@@ -241,8 +236,6 @@ namespace Homework_6._2
 
          return arrayString;
       }
-
-
 
       public static void InputArrayString(string[,] inputArray)
       {
