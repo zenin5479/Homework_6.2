@@ -42,8 +42,9 @@ namespace Homework_6._2
          string bestWord = "";
          int maxVowelCount = -1;
 
-         foreach (string word in words)
+         for (var index = 0; index < words.Length; index++)
          {
+            var word = words[index];
             int currentVowelCount = 0;
             for (int i = 0; i < word.ToLower().Length; i++)
             {
