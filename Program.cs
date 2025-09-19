@@ -49,12 +49,11 @@ namespace Homework_6._2
          while (i < words.GetLength(0))
          {
             int j = 0;
-            while (j < words.GetLength(1) && )
+            while (j < words.GetLength(1))
             {
                string word = words[i, j];
                int currentVowelCount = 0;
                int k = 0;
-
                if (word != null)
                {
                   while (k < word.Length)
