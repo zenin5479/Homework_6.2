@@ -42,13 +42,13 @@ namespace Homework_6._2
          string bestWord = "";
          int maxVowelCount = -1;
 
-         for (var index = 0; index < words.Length; index++)
+         for (int i = 0; i < words.Length; i++)
          {
-            var word = words[index];
+            var word = words[i];
             int currentVowelCount = 0;
-            for (int i = 0; i < word.ToLower().Length; i++)
+            for (int j = 0; j < word.ToLower().Length; j++)
             {
-               var c = word.ToLower()[i];
+               var c = word.ToLower()[j];
                if (vowels.IndexOf(c) != -1)
                {
                   currentVowelCount++;
