@@ -47,7 +47,7 @@ namespace Homework_6._2
             int l = 0;
             while (l < words.GetLength(1))
             {
-               string word = words[i];
+               string word = words[i, l];
                int currentVowelCount = 0;
                int j = 0;
                while (j < word.Length)
