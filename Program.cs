@@ -45,7 +45,7 @@ namespace Homework_6._2
          foreach (string word in words)
          {
             int currentVowelCount = 0;
-            for (var i = 0; i < word.ToLower().Length; i++)
+            for (int i = 0; i < word.ToLower().Length; i++)
             {
                var c = word.ToLower()[i];
                if (vowels.IndexOf(c) != -1)
