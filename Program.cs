@@ -47,7 +47,7 @@ namespace Homework_6._2
             string word = words[i];
             int currentVowelCount = 0;
             int j = 0;
-            while (j < word.ToLower().Length)
+            while (j < word.Length)
             {
                char c = word.ToLower()[j];
                if (vowels.IndexOf(c) != -1)
