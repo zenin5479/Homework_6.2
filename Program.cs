@@ -63,22 +63,22 @@ namespace Homework_6._2
                      }
 
                      // Сравниваем значения string используя метод Compare игнорируя регистр
-                     //if (string.Compare(vowels[k].ToString(), c, StringComparison.OrdinalIgnoreCase) == 0)
-                     //{
-                     //   currentVowelCount++;
-                     //}
+                     if (string.Compare(vowels[k].ToString(), c, StringComparison.OrdinalIgnoreCase) == 0)
+                     {
+                        currentVowelCount++;
+                     }
 
                      // Сравниваем значения string используя метод Equals(string) с учетом регистра
-                     //if (Equals(vowels[k].ToString(), c))
-                     //{
-                     //   currentVowelCount++;
-                     //}
+                     if (Equals(vowels[k].ToString(), c))
+                     {
+                        currentVowelCount++;
+                     }
 
                      // Сравниваем значения string используя метод Equals(string) игнорируя регистр
-                     //if (string.Equals(vowels[k].ToString(), c, StringComparison.OrdinalIgnoreCase))
-                     //{
-                     //   currentVowelCount++;
-                     //}
+                     if (string.Equals(vowels[k].ToString(), c, StringComparison.OrdinalIgnoreCase))
+                     {
+                        currentVowelCount++;
+                     }
 
                      k++;
                   }
@@ -92,11 +92,10 @@ namespace Homework_6._2
                   bestWord = word;
                }
 
-               i++;
-
+               l++;
             }
 
-
+            i++;
          }
 
          return bestWord;
