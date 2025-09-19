@@ -95,7 +95,6 @@ namespace Homework_6._2
                      maxVowelCount = currentVowelCount;
                      bestWord = words[i, j];
                   }
-
                }
 
                j++;
