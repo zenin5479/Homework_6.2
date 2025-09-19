@@ -205,7 +205,7 @@ namespace Homework_6._2
 
       public static string FindWordWithMostVowels(string[] words)
       {
-         string vowels = "аеёиоуыэюя   АЕЁИОУЫЭЮЯ";
+         string vowels = "аеёиоуыэюяАЕЁИОУЫЭЮЯ";
          string bestWord = "";
          int maxVowelCount = -1;
 
