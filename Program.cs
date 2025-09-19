@@ -44,28 +44,20 @@ namespace Homework_6._2
          int i = 0;
          while (i < words.Length)
          {
-            
-            
-            while ()
-            {
-
-
-
-
-            }
-
-
-
             var word = words[i];
             int currentVowelCount = 0;
-            for (int j = 0; j < word.ToLower().Length; j++)
+            int j = 0;
+            while (j < word.ToLower().Length)
             {
                var c = word.ToLower()[j];
                if (vowels.IndexOf(c) != -1)
                {
                   currentVowelCount++;
                }
+
+               j++;
             }
+
 
             if (currentVowelCount > maxVowelCount)
             {
