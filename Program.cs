@@ -44,7 +44,7 @@ namespace Homework_6._2
          int i = 0;
          while (i < words.Length)
          {
-            var word = words[i];
+            string word = words[i];
             int currentVowelCount = 0;
             int j = 0;
             while (j < word.ToLower().Length)
