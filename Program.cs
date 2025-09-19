@@ -56,16 +56,16 @@ namespace Homework_6._2
                while (k < vowels.Length)
                {
                   // Сравниваем значения string используя метод Compare игнорируя регистр
-                  if (char.CompareTo(vowels[k], c) == 0)
-                  {
-                     currentVowelCount++;
-                  }
+                  //if (char.CompareTo(vowels[k], c) == 0)
+                  //{
+                  //   currentVowelCount++;
+                  //}
 
                   // Сравниваем значения string используя метод Equals(string) с учетом регистра
-                  if (Equals(vowels[k], c))
-                  {
-                     currentVowelCount++;
-                  }
+                  //if (Equals(vowels[k], c))
+                  //{
+                  //   currentVowelCount++;
+                  //}
 
                   // Сравниваем значения string используя метод Equals(string) игнорируя регистр
                   if (string.Equals(vowels[k].ToString(), c, StringComparison.OrdinalIgnoreCase))
