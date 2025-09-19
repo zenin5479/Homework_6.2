@@ -61,16 +61,16 @@ namespace Homework_6._2
                      while (l < vowels.Length)
                      {
                         // Сравниваем значения string используя метод String.CompareOrdinal с учетом регистра и текущей культуры
-                        if (string.CompareOrdinal(vowels[l].ToString(), c) == 0)
-                        {
-                           currentVowelCount++;
-                        }
-
-                        // Сравниваем значения string используя метод Compare игнорируя регистр
-                        //if (string.Compare(vowels[l].ToString(), c, StringComparison.OrdinalIgnoreCase) == 0)
+                        //if (string.CompareOrdinal(vowels[l].ToString(), c) == 0)
                         //{
                         //   currentVowelCount++;
                         //}
+
+                        // Сравниваем значения string используя метод Compare игнорируя регистр
+                        if (string.Compare(vowels[l].ToString(), c, StringComparison.OrdinalIgnoreCase) == 0)
+                        {
+                           currentVowelCount++;
+                        }
 
                         // Сравниваем значения string используя метод Equals(string) с учетом регистра
                         //if (Equals(vowels[l].ToString(), c))
@@ -284,9 +284,9 @@ namespace Homework_6._2
 
             // Поиск и замена слов в массиве строк
             int k = 0;
-            int l = 0;
             while (k < arrayString.GetLength(0))
             {
+               int l = 0;
                while (l < arrayString.GetLength(1))
                {
                   // Сравниваем значения string используя метод String.CompareOrdinal с учетом регистра и текущей культуры
@@ -322,7 +322,6 @@ namespace Homework_6._2
                   l++;
                }
 
-               l = 0;
                k++;
             }
 
