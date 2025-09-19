@@ -33,7 +33,6 @@ namespace Homework_6._2
          string results = FindWordWithMostVowels(words);
          Console.WriteLine("Слово с наибольшим количеством гласных: {0}", results);
 
-
          string res = FindWordWithMostVowels(result);
          Console.WriteLine("Слово с наибольшим количеством гласных: {0}", res);
 
@@ -70,22 +69,22 @@ namespace Homework_6._2
                         }
 
                         // Сравниваем значения string используя метод Compare игнорируя регистр
-                        if (string.Compare(vowels[l].ToString(), c, StringComparison.OrdinalIgnoreCase) == 0)
-                        {
-                           currentVowelCount++;
-                        }
+                        //if (string.Compare(vowels[l].ToString(), c, StringComparison.OrdinalIgnoreCase) == 0)
+                        //{
+                        //   currentVowelCount++;
+                        //}
 
                         // Сравниваем значения string используя метод Equals(string) с учетом регистра
-                        if (Equals(vowels[l].ToString(), c))
-                        {
-                           currentVowelCount++;
-                        }
+                        //if (Equals(vowels[l].ToString(), c))
+                        //{
+                        //   currentVowelCount++;
+                        //}
 
                         // Сравниваем значения string используя метод Equals(string) игнорируя регистр
-                        if (string.Equals(vowels[l].ToString(), c, StringComparison.OrdinalIgnoreCase))
-                        {
-                           currentVowelCount++;
-                        }
+                        //if (string.Equals(vowels[l].ToString(), c, StringComparison.OrdinalIgnoreCase))
+                        //{
+                        //   currentVowelCount++;
+                        //}
 
                         l++;
                      }
