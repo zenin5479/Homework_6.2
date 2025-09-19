@@ -62,12 +62,10 @@ namespace Homework_6._2
                   }
 
                   // Сравниваем значения string используя метод Compare игнорируя регистр
-                  if (string.Compare(vowels[k].ToString(), c, StringComparison.OrdinalIgnoreCase) == 0)
-                  {
-                     currentVowelCount++;
-                  }
-
-
+                  //if (string.Compare(vowels[k].ToString(), c, StringComparison.OrdinalIgnoreCase) == 0)
+                  //{
+                  //   currentVowelCount++;
+                  //}
 
                   // Сравниваем значения string используя метод Equals(string) с учетом регистра
                   //if (Equals(vowels[k].ToString(), c))
@@ -80,7 +78,6 @@ namespace Homework_6._2
                   //{
                   //   currentVowelCount++;
                   //}
-
 
                   k++;
                }
