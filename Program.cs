@@ -148,6 +148,7 @@ namespace Homework_6._2
                row++;
             }
 
+            // Поиск и замена слов в массиве строк
             int k = 0;
             int l = 0;
             while (k < arrayString.GetLength(0))
