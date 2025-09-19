@@ -33,7 +33,6 @@ namespace Homework_6._2
          string results = FindWordWithMostVowels(words);
          Console.WriteLine("Слово с наибольшим количеством гласных:{0}", results);
 
-
          Console.ReadKey();
       }
 
