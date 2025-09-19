@@ -44,46 +44,46 @@ namespace Homework_6._2
          int i = 0;
          while (i < words.GetLength(0))
          {
-            int l = 0;
-            while (l < words.GetLength(1))
+            int j = 0;
+            while (j < words.GetLength(1))
             {
-               string word = words[i, l];
+               string word = words[i, j];
                int currentVowelCount = 0;
-               int x = 0;
-               while (x < word.Length)
+               int k = 0;
+               while (k < word.Length)
                {
-                  string c = word[x].ToString();
-                  int z = 0;
-                  while (z < vowels.Length)
+                  string c = word[k].ToString();
+                  int l = 0;
+                  while (l < vowels.Length)
                   {
                      // Сравниваем значения string используя метод String.CompareOrdinal с учетом регистра и текущей культуры
-                     if (string.CompareOrdinal(vowels[z].ToString(), c) == 0)
+                     if (string.CompareOrdinal(vowels[l].ToString(), c) == 0)
                      {
                         currentVowelCount++;
                      }
 
                      // Сравниваем значения string используя метод Compare игнорируя регистр
-                     if (string.Compare(vowels[z].ToString(), c, StringComparison.OrdinalIgnoreCase) == 0)
+                     if (string.Compare(vowels[l].ToString(), c, StringComparison.OrdinalIgnoreCase) == 0)
                      {
                         currentVowelCount++;
                      }
 
                      // Сравниваем значения string используя метод Equals(string) с учетом регистра
-                     if (Equals(vowels[z].ToString(), c))
+                     if (Equals(vowels[l].ToString(), c))
                      {
                         currentVowelCount++;
                      }
 
                      // Сравниваем значения string используя метод Equals(string) игнорируя регистр
-                     if (string.Equals(vowels[z].ToString(), c, StringComparison.OrdinalIgnoreCase))
+                     if (string.Equals(vowels[l].ToString(), c, StringComparison.OrdinalIgnoreCase))
                      {
                         currentVowelCount++;
                      }
 
-                     z++;
+                     l++;
                   }
 
-                  x++;
+                  k++;
                }
 
                if (currentVowelCount > maxVowelCount)
@@ -92,7 +92,7 @@ namespace Homework_6._2
                   bestWord = word;
                }
 
-               l++;
+               j++;
             }
 
             i++;
