@@ -50,14 +50,13 @@ namespace Homework_6._2
             int j = 0;
             while (j < words.GetLength(1))
             {
-               string word = words[i, j];
-               if (word != null)
+               if (words[i, j] != null)
                {
                   int currentVowelCount = 0;
                   int k = 0;
-                  while (k < word.Length)
+                  while (k < words[i, j].Length)
                   {
-                     string c = word[k].ToString();
+                     string c = words[i, j][k].ToString();
                      int l = 0;
                      while (l < vowels.Length)
                      {
@@ -94,7 +93,7 @@ namespace Homework_6._2
                   if (currentVowelCount > maxVowelCount)
                   {
                      maxVowelCount = currentVowelCount;
-                     bestWord = word;
+                     bestWord = words[i, j];
                   }
 
                }
