@@ -36,6 +36,33 @@ namespace Homework_6._2
          Console.ReadKey();
       }
 
+      public static string FindWordWithMostVowels(string[] words)
+      {
+         string vowels = "аеёиоуыэюяАЕЁИОУЫЭЮЯ";
+         string bestWord = "";
+         int maxVowelCount = -1;
+
+         foreach (string word in words)
+         {
+            int currentVowelCount = 0;
+            for (var i = 0; i < word.ToLower().Length; i++)
+            {
+               var c = word.ToLower()[i];
+               if (vowels.IndexOf(c) != -1)
+               {
+                  currentVowelCount++;
+               }
+            }
+
+            if (currentVowelCount > maxVowelCount)
+            {
+               maxVowelCount = currentVowelCount;
+               bestWord = word;
+            }
+         }
+
+         return bestWord;
+      }
       public static string[,] ReplaceWord(string path, string oldWord, string newWord)
       {
          // Одномерный массив строк
@@ -203,33 +230,7 @@ namespace Homework_6._2
          return arrayString;
       }
 
-      public static string FindWordWithMostVowels(string[] words)
-      {
-         string vowels = "аеёиоуыэюяАЕЁИОУЫЭЮЯ";
-         string bestWord = "";
-         int maxVowelCount = -1;
 
-         foreach (string word in words)
-         {
-            int currentVowelCount = 0;
-            for (var i = 0; i < word.ToLower().Length; i++)
-            {
-               var c = word.ToLower()[i];
-               if (vowels.IndexOf(c) != -1)
-               {
-                  currentVowelCount++;
-               }
-            }
-
-            if (currentVowelCount > maxVowelCount)
-            {
-               maxVowelCount = currentVowelCount;
-               bestWord = word;
-            }
-         }
-
-         return bestWord;
-      }
 
       public static void InputArrayString(string[,] inputArray)
       {
