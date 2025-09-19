@@ -203,31 +203,31 @@ namespace Homework_6._2
       }
 
       public static string FindWordWithMostVowels(string[] words)
-    {
-        string vowels = "аеёиоуыэюя";
-        string bestWord = "";
-        int maxVowelCount = -1;
+      {
+         string vowels = "аеёиоуыэюя";
+         string bestWord = "";
+         int maxVowelCount = -1;
 
-        foreach (string word in words)
-        {
+         foreach (string word in words)
+         {
             int currentVowelCount = 0;
             foreach (char c in word.ToLower())
             {
-                if (vowels.IndexOf(c) != -1)
-                {
-                    currentVowelCount++;
-                }
+               if (vowels.IndexOf(c) != -1)
+               {
+                  currentVowelCount++;
+               }
             }
 
             if (currentVowelCount > maxVowelCount)
             {
-                maxVowelCount = currentVowelCount;
-                bestWord = word;
+               maxVowelCount = currentVowelCount;
+               bestWord = word;
             }
-        }
+         }
 
-        return bestWord;
-    }
+         return bestWord;
+      }
 
       public static void InputArrayString(string[,] inputArray)
       {
