@@ -49,41 +49,41 @@ namespace Homework_6._2
             {
                string word = words[i, l];
                int currentVowelCount = 0;
-               int j = 0;
-               while (j < word.Length)
+               int x = 0;
+               while (x < word.Length)
                {
-                  string c = word[j].ToString();
-                  int k = 0;
-                  while (k < vowels.Length)
+                  string c = word[x].ToString();
+                  int z = 0;
+                  while (z < vowels.Length)
                   {
                      // Сравниваем значения string используя метод String.CompareOrdinal с учетом регистра и текущей культуры
-                     if (string.CompareOrdinal(vowels[k].ToString(), c) == 0)
+                     if (string.CompareOrdinal(vowels[z].ToString(), c) == 0)
                      {
                         currentVowelCount++;
                      }
 
                      // Сравниваем значения string используя метод Compare игнорируя регистр
-                     if (string.Compare(vowels[k].ToString(), c, StringComparison.OrdinalIgnoreCase) == 0)
+                     if (string.Compare(vowels[z].ToString(), c, StringComparison.OrdinalIgnoreCase) == 0)
                      {
                         currentVowelCount++;
                      }
 
                      // Сравниваем значения string используя метод Equals(string) с учетом регистра
-                     if (Equals(vowels[k].ToString(), c))
+                     if (Equals(vowels[z].ToString(), c))
                      {
                         currentVowelCount++;
                      }
 
                      // Сравниваем значения string используя метод Equals(string) игнорируя регистр
-                     if (string.Equals(vowels[k].ToString(), c, StringComparison.OrdinalIgnoreCase))
+                     if (string.Equals(vowels[z].ToString(), c, StringComparison.OrdinalIgnoreCase))
                      {
                         currentVowelCount++;
                      }
 
-                     k++;
+                     z++;
                   }
 
-                  j++;
+                  x++;
                }
 
                if (currentVowelCount > maxVowelCount)
