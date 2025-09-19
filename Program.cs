@@ -27,6 +27,7 @@ namespace Homework_6._2
          string newWord = "два";
          string[,] result = ReplaceWord(pathEnter, oldWord, newWord);
          InputArrayString(result);
+         Console.WriteLine();
 
          string[] words = { "пример", "строка", "гласные", "программирование" };
          string results = FindWordWithMostVowels(words);
