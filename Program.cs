@@ -54,6 +54,7 @@ namespace Homework_6._2
                string word = words[i, j];
                int currentVowelCount = 0;
                int k = 0;
+
                if (word != null)
                {
                   while (k < word.Length)
