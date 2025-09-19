@@ -49,7 +49,7 @@ namespace Homework_6._2
             int j = 0;
             while (j < word.Length)
             {
-               char c = word.ToLower()[j];
+               char c = word[j];
                if (vowels.IndexOf(c) != -1)
                {
                   currentVowelCount++;
