@@ -29,7 +29,7 @@ namespace Homework_6._2
          InputArrayString(result);
          Console.WriteLine();
 
-         string[] words = { "Счастье", "складывается", "из", "мелочей", "а", "складывается", "из", "мелочей" };
+         string[] words = { "Счастье", "складывается", "из", "мелочей", "а", "не", "из", "мелочей" };
 
         
            
