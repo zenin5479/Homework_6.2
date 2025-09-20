@@ -52,6 +52,7 @@ namespace Homework_6._2
             {
                if (words[i, j] != null)
                {
+                  Console.WriteLine(words[i, j]);
                   int countVowel = 0;
                   int k = 0;
                   while (k < words[i, j].Length)
@@ -89,6 +90,8 @@ namespace Homework_6._2
 
                      k++;
                   }
+
+                  Console.WriteLine(countVowel);
 
                   if (countVowel > countMaxVowel)
                   {
