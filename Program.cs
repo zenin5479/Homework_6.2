@@ -42,7 +42,7 @@ namespace Homework_6._2
       public static string FindWordWithMostVowels(string[,] words)
       {
          char[] vowels = { 'а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я', 'А', 'Е', 'Ё', 'И', 'О', 'У', 'Ы', 'Э', 'Ю', 'Я' };
-         string MostWord = "";
+         string mostWord = "";
          int countMaxVowel = -1;
          int i = 0;
          while (i < words.GetLength(0))
@@ -56,6 +56,8 @@ namespace Homework_6._2
                   int k = 0;
                   while (k < words[i, j].Length)
                   {
+                     
+                     
                      string c = words[i, j][k].ToString();
                      int l = 0;
                      while (l < vowels.Length)
@@ -93,7 +95,7 @@ namespace Homework_6._2
                   if (countVowel > countMaxVowel)
                   {
                      countMaxVowel = countVowel;
-                     MostWord = words[i, j];
+                     mostWord = words[i, j];
                   }
                }
 
@@ -103,7 +105,7 @@ namespace Homework_6._2
             i++;
          }
 
-         return MostWord;
+         return mostWord;
       }
 
       public static string FindWordWithMostVowels(string[] words)
