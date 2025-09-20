@@ -52,7 +52,7 @@ namespace Homework_6._2
             {
                if (words[i, j] != null)
                {
-                  int countVowelCount = 0;
+                  int countVowel = 0;
                   int k = 0;
                   while (k < words[i, j].Length)
                   {
@@ -63,25 +63,25 @@ namespace Homework_6._2
                         // Сравниваем значения string используя метод String.CompareOrdinal с учетом регистра и текущей культуры
                         if (string.CompareOrdinal(vowels[l].ToString(), c) == 0)
                         {
-                           countVowelCount++;
+                           countVowel++;
                         }
 
                         // Сравниваем значения string используя метод Compare игнорируя регистр
                         if (string.Compare(vowels[l].ToString(), c, StringComparison.OrdinalIgnoreCase) == 0)
                         {
-                           countVowelCount++;
+                           countVowel++;
                         }
 
                         // Сравниваем значения string используя метод Equals(string) с учетом регистра
                         if (Equals(vowels[l].ToString(), c))
                         {
-                           countVowelCount++;
+                           countVowel++;
                         }
 
                         // Сравниваем значения string используя метод Equals(string) игнорируя регистр
                         if (string.Equals(vowels[l].ToString(), c, StringComparison.OrdinalIgnoreCase))
                         {
-                           countVowelCount++;
+                           countVowel++;
                         }
 
                         l++;
@@ -90,9 +90,9 @@ namespace Homework_6._2
                      k++;
                   }
 
-                  if (countVowelCount > maxVowelCount)
+                  if (countVowel > maxVowelCount)
                   {
-                     maxVowelCount = countVowelCount;
+                     maxVowelCount = countVowel;
                      bestWord = words[i, j];
                   }
                }
