@@ -56,7 +56,6 @@ namespace Homework_6._2
                   int k = 0;
                   while (k < words[i, j].Length)
                   {
-                     //partString
 
 
                      string partString = words[i, j][k].ToString();
