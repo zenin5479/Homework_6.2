@@ -52,7 +52,7 @@ namespace Homework_6._2
             {
                if (words[i, j] != null)
                {
-                  int currentVowelCount = 0;
+                  int countVowelCount = 0;
                   int k = 0;
                   while (k < words[i, j].Length)
                   {
@@ -61,28 +61,28 @@ namespace Homework_6._2
                      while (l < vowels.Length)
                      {
                         // Сравниваем значения string используя метод String.CompareOrdinal с учетом регистра и текущей культуры
-                        //if (string.CompareOrdinal(vowels[l].ToString(), c) == 0)
-                        //{
-                        //   currentVowelCount++;
-                        //}
+                        if (string.CompareOrdinal(vowels[l].ToString(), c) == 0)
+                        {
+                           countVowelCount++;
+                        }
 
                         // Сравниваем значения string используя метод Compare игнорируя регистр
                         if (string.Compare(vowels[l].ToString(), c, StringComparison.OrdinalIgnoreCase) == 0)
                         {
-                           currentVowelCount++;
+                           countVowelCount++;
                         }
 
                         // Сравниваем значения string используя метод Equals(string) с учетом регистра
-                        //if (Equals(vowels[l].ToString(), c))
-                        //{
-                        //   currentVowelCount++;
-                        //}
+                        if (Equals(vowels[l].ToString(), c))
+                        {
+                           countVowelCount++;
+                        }
 
                         // Сравниваем значения string используя метод Equals(string) игнорируя регистр
-                        //if (string.Equals(vowels[l].ToString(), c, StringComparison.OrdinalIgnoreCase))
-                        //{
-                        //   currentVowelCount++;
-                        //}
+                        if (string.Equals(vowels[l].ToString(), c, StringComparison.OrdinalIgnoreCase))
+                        {
+                           countVowelCount++;
+                        }
 
                         l++;
                      }
@@ -90,9 +90,9 @@ namespace Homework_6._2
                      k++;
                   }
 
-                  if (currentVowelCount > maxVowelCount)
+                  if (countVowelCount > maxVowelCount)
                   {
-                     maxVowelCount = currentVowelCount;
+                     maxVowelCount = countVowelCount;
                      bestWord = words[i, j];
                   }
                }
