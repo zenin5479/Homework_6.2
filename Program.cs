@@ -56,32 +56,33 @@ namespace Homework_6._2
                   int k = 0;
                   while (k < words[i, j].Length)
                   {
-                     
-                     
-                     string c = words[i, j][k].ToString();
+                     //partString
+
+
+                     string partString = words[i, j][k].ToString();
                      int l = 0;
                      while (l < vowels.Length)
                      {
                         // Сравниваем значения string используя метод String.CompareOrdinal с учетом регистра и текущей культуры
-                        if (string.CompareOrdinal(vowels[l].ToString(), c) == 0)
+                        if (string.CompareOrdinal(vowels[l].ToString(), partString) == 0)
                         {
                            countVowel++;
                         }
 
                         // Сравниваем значения string используя метод Compare игнорируя регистр
-                        if (string.Compare(vowels[l].ToString(), c, StringComparison.OrdinalIgnoreCase) == 0)
+                        if (string.Compare(vowels[l].ToString(), partString, StringComparison.OrdinalIgnoreCase) == 0)
                         {
                            countVowel++;
                         }
 
                         // Сравниваем значения string используя метод Equals(string) с учетом регистра
-                        if (Equals(vowels[l].ToString(), c))
+                        if (Equals(vowels[l].ToString(), partString))
                         {
                            countVowel++;
                         }
 
                         // Сравниваем значения string используя метод Equals(string) игнорируя регистр
-                        if (string.Equals(vowels[l].ToString(), c, StringComparison.OrdinalIgnoreCase))
+                        if (string.Equals(vowels[l].ToString(), partString, StringComparison.OrdinalIgnoreCase))
                         {
                            countVowel++;
                         }
