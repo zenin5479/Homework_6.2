@@ -55,8 +55,6 @@ namespace Homework_6._2
          // Символ '—' может отличатся, поэтому считатся не будет
 
          int vowels, consonants, others, punctuationmarks, sumAll, sumFour;
-         
-
 
          Console.ReadKey();
       }
