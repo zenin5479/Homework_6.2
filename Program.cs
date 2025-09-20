@@ -36,10 +36,7 @@ namespace Homework_6._2
          string wordsArray = FindWordWithMostVowels(replace);
          Console.WriteLine("Слово с наибольшим количеством гласных: {0}", wordsArray);
 
-         char[] vowelscCh =
-         { 'а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я',
-            'А', 'Е', 'Ё', 'И', 'О', 'У', 'Ы', 'Э', 'Ю', 'Я'
-         };
+         
 
 
          Console.ReadKey();
