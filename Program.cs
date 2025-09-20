@@ -37,8 +37,6 @@ namespace Homework_6._2
          Console.WriteLine("Слово с наибольшим количеством гласных: {0}", wordsArray);
 
 
-
-
          Console.ReadKey();
       }
 
