@@ -79,20 +79,18 @@ namespace Homework_6._2
                         //}
 
                         // Вариант 1
-                        // Сравниваем значения string используя метод Equals(string) игнорируя регистр
-                        //if (string.Equals(vowels[l].ToString(), partString, StringComparison.OrdinalIgnoreCase))
-                        //{
-                        //   countVowel++;
-                        //}
-
-                        // Вариант 2
                         // Сравниваем значения string используя метод Equals(string) с учетом регистра
                         //if (Equals(vowels[l].ToString(), partString))
                         //{
                         //   countVowel++;
                         //}
-
-
+                        
+                        // Вариант 2
+                        // Сравниваем значения string используя метод Equals(string) игнорируя регистр
+                        if (string.Equals(vowels[l].ToString(), partString, StringComparison.OrdinalIgnoreCase))
+                        {
+                           countVowel++;
+                        }
 
                         l++;
                      }
