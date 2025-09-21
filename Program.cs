@@ -310,16 +310,16 @@ namespace Homework_6._2
             while (l < arrayString.GetLength(1))
             {
                // Сравниваем значения string используя метод String.CompareOrdinal с учетом регистра и текущей культуры
-               //if (string.CompareOrdinal(arrayString[k, l], oldWord) == 0)
-               //{
-               //   arrayString[k, l] = newWord;
-               //}
-
-               // Сравниваем значения string используя метод Compare игнорируя регистр
-               if (string.Compare(arrayString[k, l], oldWord, StringComparison.OrdinalIgnoreCase) == 0)
+               if (string.CompareOrdinal(arrayString[k, l], oldWord) == 0)
                {
                   arrayString[k, l] = newWord;
                }
+
+               // Сравниваем значения string используя метод Compare игнорируя регистр
+               //if (string.Compare(arrayString[k, l], oldWord, StringComparison.OrdinalIgnoreCase) == 0)
+               //{
+               //   arrayString[k, l] = newWord;
+               //}
 
                // Сравниваем значения string используя метод Compare с указанием культуры и опций
                //if (string.Compare(arrayString[k, l], oldWord, CultureInfo.InvariantCulture, CompareOptions.IgnoreNonSpace) == 0)
