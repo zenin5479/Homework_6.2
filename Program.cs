@@ -356,5 +356,51 @@ namespace Homework_6._2
 
          Console.WriteLine();
       }
+
+      public static string[] OutputArrayString(double[,] inputArray)
+      {
+         // Объединение двумерного массива double[]
+         // в одномерный массив строк string[] для записи в файл
+         //Console.WriteLine("Одномерный массив строк");
+         StringBuilder stringModified = new StringBuilder();
+         string[] arrayString = new string[inputArray.GetLength(0)];
+         string subLine;
+         int row = 0;
+         while (row < inputArray.GetLength(0))
+         {
+            int column = 0;
+            while (column < inputArray.GetLength(1))
+            {
+               if (column == inputArray.GetLength(1) - 1)
+               {
+                  stringModified.Append(inputArray[row, column]);
+                  subLine = stringModified.ToString();
+                  arrayString[row] = subLine;
+               }
+               else
+               {
+                  stringModified.Append(inputArray[row, column] + " ");
+                  subLine = stringModified.ToString();
+                  arrayString[row] = subLine;
+               }
+
+               column++;
+            }
+
+            //Console.WriteLine(subLine);
+            stringModified.Clear();
+            row++;
+         }
+
+         return arrayString;
+      }
+
+      public static void FileWriteArrayString(string[] arrayString, string nameFile)
+      {
+         // Запись массива строк в файл
+         Console.WriteLine("Запись массива строк в файл {0}", nameFile);
+         string filePath = AppContext.BaseDirectory + nameFile;
+         File.WriteAllLines(filePath, arrayString);
+      }
    }
 }
