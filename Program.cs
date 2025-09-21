@@ -23,7 +23,7 @@ namespace Homework_6._2
          string fileInput = "finish.txt";
          string pathInput = Path.GetFullPath(fileInput);
 
-         string[,] replace = EnterArrayDouble(pathEnter);
+         string[,] enterArray = EnterArrayString(pathEnter);
 
          string oldWord = "один";
          string newWord = "два";
@@ -180,7 +180,7 @@ namespace Homework_6._2
          return bestWord;
       }
 
-      public static string[,] EnterArrayDouble(string path)
+      public static string[,] EnterArrayString(string path)
       {
          // Одномерный массив строк
          string[,] arrayString = { };
