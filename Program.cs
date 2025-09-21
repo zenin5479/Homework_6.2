@@ -225,7 +225,7 @@ namespace Homework_6._2
                }
 
                sizeArray[countRow] = countСolumn;
-               Console.WriteLine("В строке {0} количество столбцов {1}", countRow, countСolumn);
+               //Console.WriteLine("В строке {0} количество столбцов {1}", countRow, countСolumn);
                countСolumn = 0;
                countRow++;
                countSymbol = 0;
@@ -245,7 +245,7 @@ namespace Homework_6._2
                columns++;
             }
 
-            Console.WriteLine("Максимум равен: {0}", max);
+            //Console.WriteLine("Максимум равен: {0}", max);
 
             // Разделение строк на подстроки по пробелу и заполнение двумерного массива строк элементами
             // Измерение массива (0) - количество строк, измерение массива (1) - количество столбцов, равное максимуму
