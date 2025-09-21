@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.Text;
-using System.Threading.Channels;
 
 // Обработка текста
 // Дан текст. Текст разбит на слова, предполагается, что слово – это группа символов,
