@@ -23,6 +23,8 @@ namespace Homework_6._2
          string fileInput = "finish.txt";
          string pathInput = Path.GetFullPath(fileInput);
 
+         string[,] replace = EnterArrayDouble(pathEnter);
+
          string oldWord = "один";
          string newWord = "два";
          string[,] replace = ReplaceWord(pathEnter, oldWord, newWord);
@@ -178,7 +180,7 @@ namespace Homework_6._2
          return bestWord;
       }
 
-      public static string[,] ReplaceWord(string path, string oldWord, string newWord)
+      public static string[,] EnterArrayDouble(string path)
       {
          // Одномерный массив строк
          string[,] arrayString = { };
@@ -294,51 +296,6 @@ namespace Homework_6._2
                column = 0;
                row++;
             }
-
-            // Поиск и замена слов в массиве строк
-            int k = 0;
-            while (k < arrayString.GetLength(0))
-            {
-               int l = 0;
-               while (l < arrayString.GetLength(1))
-               {
-                  // Сравниваем значения string используя метод String.CompareOrdinal с учетом регистра и текущей культуры
-                  //if (string.CompareOrdinal(arrayString[k, l], oldWord) == 0)
-                  //{
-                  //   arrayString[k, l] = newWord;
-                  //}
-
-                  // Сравниваем значения string используя метод Compare игнорируя регистр
-                  if (string.Compare(arrayString[k, l], oldWord, StringComparison.OrdinalIgnoreCase) == 0)
-                  {
-                     arrayString[k, l] = newWord;
-                  }
-
-                  // Сравниваем значения string используя метод Compare с указанием культуры и опций
-                  //if (string.Compare(arrayString[k, l], oldWord, CultureInfo.InvariantCulture, CompareOptions.IgnoreNonSpace) == 0)
-                  //{
-                  //   arrayString[k, l] = newWord;
-                  //}
-
-                  // Сравниваем значения string используя метод Equals(string) с учетом регистра
-                  //if (Equals(arrayString[k, l], oldWord))
-                  //{
-                  //   arrayString[k, l] = newWord;
-                  //}
-
-                  // Сравниваем значения string используя метод Equals(string) игнорируя регистр
-                  //if (string.Equals(arrayString[k, l], oldWord, StringComparison.OrdinalIgnoreCase))
-                  //{
-                  //   arrayString[k, l] = newWord;
-                  //}
-
-                  l++;
-               }
-
-               k++;
-            }
-
-            Console.WriteLine();
          }
 
          return arrayString;
