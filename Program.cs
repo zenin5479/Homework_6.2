@@ -120,65 +120,6 @@ namespace Homework_6._2
          return mostWord;
       }
 
-      public static string FindWordWithMostVowels(string[] words)
-      {
-         char[] vowels = { 'а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я', 'А', 'Е', 'Ё', 'И', 'О', 'У', 'Ы', 'Э', 'Ю', 'Я' };
-         string bestWord = "";
-         int maxVowelCount = -1;
-         int i = 0;
-         while (i < words.Length)
-         {
-            string word = words[i];
-            int currentVowelCount = 0;
-            int j = 0;
-            while (j < word.Length)
-            {
-               string c = word[j].ToString();
-               int k = 0;
-               while (k < vowels.Length)
-               {
-                  // Сравниваем значения string используя метод String.CompareOrdinal с учетом регистра и текущей культуры
-                  if (string.CompareOrdinal(vowels[k].ToString(), c) == 0)
-                  {
-                     currentVowelCount++;
-                  }
-
-                  // Сравниваем значения string используя метод Compare игнорируя регистр
-                  //if (string.Compare(vowels[k].ToString(), c, StringComparison.OrdinalIgnoreCase) == 0)
-                  //{
-                  //   currentVowelCount++;
-                  //}
-
-                  // Сравниваем значения string используя метод Equals(string) с учетом регистра
-                  //if (Equals(vowels[k].ToString(), c))
-                  //{
-                  //   currentVowelCount++;
-                  //}
-
-                  // Сравниваем значения string используя метод Equals(string) игнорируя регистр
-                  //if (string.Equals(vowels[k].ToString(), c, StringComparison.OrdinalIgnoreCase))
-                  //{
-                  //   currentVowelCount++;
-                  //}
-
-                  k++;
-               }
-
-               j++;
-            }
-
-            if (currentVowelCount > maxVowelCount)
-            {
-               maxVowelCount = currentVowelCount;
-               bestWord = word;
-            }
-
-            i++;
-         }
-
-         return bestWord;
-      }
-
       public static string[,] EnterArrayString(string path)
       {
          // Одномерный массив строк
