@@ -29,10 +29,6 @@ namespace Homework_6._2
          InputArrayString(replace);
          Console.WriteLine();
 
-         string[] wordArray = { "Счастье", "складывается", "из", "мелочей", "а", "не", "из", "одного", "грандиозного", "события" };
-         string word = FindWordWithMostVowels(wordArray);
-         Console.WriteLine("Слово с наибольшим количеством гласных: {0}", word);
-
          string wordsArray = FindWordWithMostVowels(replace);
          Console.WriteLine("Слово с наибольшим количеством гласных: {0}", wordsArray);
 
@@ -55,7 +51,7 @@ namespace Homework_6._2
             {
                if (words[i, j] != null)
                {
-                  Console.WriteLine(words[i, j]);
+                  //Console.WriteLine(words[i, j]);
                   int countVowel = 0;
                   int k = 0;
                   while (k < words[i, j].Length)
@@ -105,7 +101,7 @@ namespace Homework_6._2
                      k++;
                   }
 
-                  Console.WriteLine(countVowel);
+                  //Console.WriteLine(countVowel);
 
                   if (countVowel > countMaxVowel)
                   {
