@@ -309,11 +309,17 @@ namespace Homework_6._2
             int l = 0;
             while (l < arrayString.GetLength(1))
             {
-               // Сравниваем значения string используя метод String.CompareOrdinal с учетом регистра и текущей культуры
-               if (string.CompareOrdinal(arrayString[k, l], oldWord) == 0)
+               // Сравниваем значения string используя оператор == с учетом регистра
+               if (arrayString[k, l] == oldWord)
                {
                   arrayString[k, l] = newWord;
                }
+
+               // Сравниваем значения string используя метод String.CompareOrdinal с учетом регистра и текущей культуры
+               //if (string.CompareOrdinal(arrayString[k, l], oldWord) == 0)
+               //{
+               //   arrayString[k, l] = newWord;
+               //}
 
                // Сравниваем значения string используя метод Compare игнорируя регистр
                //if (string.Compare(arrayString[k, l], oldWord, StringComparison.OrdinalIgnoreCase) == 0)
