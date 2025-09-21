@@ -64,18 +64,21 @@ namespace Homework_6._2
                      int l = 0;
                      while (l < vowels.Length)
                      {
+                        // Вариант 1
                         // Сравниваем значения string используя метод String.CompareOrdinal с учетом регистра и текущей культуры
                         //if (string.CompareOrdinal(vowels[l].ToString(), partString) == 0)
                         //{
                         //   countVowel++;
                         //}
 
+                        
                         // Сравниваем значения string используя метод Compare игнорируя регистр
                         if (string.Compare(vowels[l].ToString(), partString, StringComparison.OrdinalIgnoreCase) == 0)
                         {
                            countVowel++;
                         }
 
+                        // Вариант 1
                         // Сравниваем значения string используя метод Equals(string) с учетом регистра
                         //if (Equals(vowels[l].ToString(), partString))
                         //{
