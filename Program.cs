@@ -73,10 +73,10 @@ namespace Homework_6._2
 
                         // Вариант 2
                         // Сравниваем значения string используя метод Compare игнорируя регистр
-                        //if (string.Compare(vowels[l].ToString(), partString, StringComparison.OrdinalIgnoreCase) == 0)
-                        //{
-                        //   countVowel++;
-                        //}
+                        if (string.Compare(vowels[l].ToString(), partString, StringComparison.OrdinalIgnoreCase) == 0)
+                        {
+                           countVowel++;
+                        }
 
                         // Вариант 1
                         // Сравниваем значения string используя метод Equals(string) с учетом регистра
@@ -84,13 +84,13 @@ namespace Homework_6._2
                         //{
                         //   countVowel++;
                         //}
-                        
+
                         // Вариант 2
                         // Сравниваем значения string используя метод Equals(string) игнорируя регистр
-                        if (string.Equals(vowels[l].ToString(), partString, StringComparison.OrdinalIgnoreCase))
-                        {
-                           countVowel++;
-                        }
+                        //if (string.Equals(vowels[l].ToString(), partString, StringComparison.OrdinalIgnoreCase))
+                        //{
+                        //   countVowel++;
+                        //}
 
                         l++;
                      }
