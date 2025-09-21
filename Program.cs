@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Text;
+using System.Threading.Channels;
 
 // Обработка текста
 // Дан текст. Текст разбит на слова, предполагается, что слово – это группа символов,
@@ -24,10 +25,10 @@ namespace Homework_6._2
          string pathInput = Path.GetFullPath(fileInput);
 
          string[,] enterArray = EnterArrayString(pathEnter);
+         Console.WriteLine();
          string oldWord = "один";
          string newWord = "два";
          string[,] replaceArray = ReplaceWord(enterArray, oldWord, newWord);
-         InputArrayString(replaceArray);
          Console.WriteLine();
          string mostVowels = FindWordWithMostVowels(replaceArray);
          Console.WriteLine("Слово с наибольшим количеством гласных: {0}", mostVowels);
@@ -344,8 +345,28 @@ namespace Homework_6._2
             k++;
          }
 
-         Console.WriteLine();
+         Console.WriteLine("Измененный двумерный массив строк");
+         int i = 0;
+         while (i < arrayString.GetLength(0))
+         {
+            int j = 0;
+            while (j < arrayString.GetLength(1))
+            {
+               if (j == arrayString.GetLength(1) - 1)
+               {
+                  Console.Write(arrayString[i, j]);
+               }
+               else
+               {
+                  Console.Write(arrayString[i, j] + " ");
+               }
 
+               j++;
+            }
+
+            i++;
+            Console.WriteLine();
+         }
 
          return arrayString;
       }
