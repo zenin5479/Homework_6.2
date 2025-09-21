@@ -24,10 +24,9 @@ namespace Homework_6._2
          string pathInput = Path.GetFullPath(fileInput);
 
          string[,] enterArray = EnterArrayString(pathEnter);
-
          string oldWord = "один";
          string newWord = "два";
-         string[,] replace = ReplaceWord(pathEnter, oldWord, newWord);
+         string[,] replace = ReplaceWord(enterArray, oldWord, newWord);
          InputArrayString(replace);
          Console.WriteLine();
 
@@ -301,7 +300,7 @@ namespace Homework_6._2
          return arrayString;
       }
 
-      public static string[,] ReplaceWord(string path, string oldWord, string newWord)
+      public static string[,] ReplaceWord(string[,] path, string oldWord, string newWord)
       {
          // Одномерный массив строк
          string[,] arrayString = { };
