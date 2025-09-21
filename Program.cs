@@ -65,7 +65,7 @@ namespace Homework_6._2
                      while (l < vowels.Length)
                      {
                         // Вариант 1
-                        // Сравниваем значения с учетом регистра
+                        // Сравниваем значения string с учетом регистра
                         if (vowels[l].ToString() == partString)
                         {
                            countVowel++;
