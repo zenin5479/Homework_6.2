@@ -26,11 +26,11 @@ namespace Homework_6._2
          string[,] enterArray = EnterArrayString(pathEnter);
          string oldWord = "один";
          string newWord = "два";
-         string[,] replace = ReplaceWord(enterArray, oldWord, newWord);
-         InputArrayString(replace);
+         string[,] replaceArray = ReplaceWord(enterArray, oldWord, newWord);
+         InputArrayString(replaceArray);
          Console.WriteLine();
 
-         string wordsArray = FindWordWithMostVowels(replace);
+         string wordsArray = FindWordWithMostVowels(replaceArray);
          Console.WriteLine("Слово с наибольшим количеством гласных: {0}", wordsArray);
 
          Console.ReadKey();
