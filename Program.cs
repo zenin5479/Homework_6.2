@@ -35,7 +35,7 @@ namespace Homework_6._2
          Console.ReadKey();
       }
 
-      
+
 
       public static string[,] EnterArrayString(string path)
       {
@@ -235,7 +235,7 @@ namespace Homework_6._2
          return arrayString;
       }
 
-public static string FindWordWithMostVowels(string[,] words)
+      public static string FindWordWithMostVowels(string[,] words)
       {
          // Вариант 1
          char[] vowels = { 'а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я', 'А', 'Е', 'Ё', 'И', 'О', 'У', 'Ы', 'Э', 'Ю', 'Я' };
