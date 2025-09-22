@@ -30,6 +30,7 @@ namespace Homework_6._2
          string[,] replaceArray = ReplaceWord(enterArray, oldWord, newWord);
          Console.WriteLine();
          string[] intermediate = OutputArrayString(replaceArray);
+         FileWriteArrayString(pathIntermediate, intermediate, intermediateFile);
          Console.WriteLine();
 
          string mostVowels = FindWordWithMostVowels(replaceArray);
@@ -358,12 +359,11 @@ namespace Homework_6._2
          return arrayString;
       }
 
-      public static void FileWriteArrayString(string[] arrayString, string nameFile)
+      public static void FileWriteArrayString(string path, string[] arrayString, string nameFile)
       {
          // Запись массива строк в файл
          Console.WriteLine("Запись массива строк в файл {0}", nameFile);
-         string filePath = AppContext.BaseDirectory + nameFile;
-         File.WriteAllLines(filePath, arrayString);
+         File.WriteAllLines(path, arrayString);
       }
 
       public static void InputArrayString(string[,] inputArray)
