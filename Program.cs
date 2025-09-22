@@ -34,9 +34,9 @@ namespace Homework_6._2
          Console.WriteLine();
 
          string mostVowels = FindWordWithMostVowels(replaceArray);
-         string text = "Слово с наибольшим количеством гласных:" + mostVowels;
-         Console.WriteLine(text);
-         FileAppendStringArray(pathInput, text);
+         string inputMostVowels = "Слово с наибольшим количеством гласных:" + mostVowels;
+         Console.WriteLine(inputMostVowels);
+         FileAppendStringArray(pathInput, inputMostVowels);
 
          Console.ReadKey();
       }
