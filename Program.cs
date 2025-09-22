@@ -317,46 +317,7 @@ namespace Homework_6._2
          return mostWord;
       }
 
-      public static void InputArrayString(string[,] inputArray)
-      {
-         Console.WriteLine("Двумерный массив строк");
-         int i = 0;
-         while (i < inputArray.GetLength(0))
-         {
-            int j = 0;
-            while (j < inputArray.GetLength(1))
-            {
-               if (j == inputArray.GetLength(1) - 1)
-               {
-                  Console.Write(inputArray[i, j]);
-               }
-               else
-               {
-                  Console.Write(inputArray[i, j] + " ");
-               }
-
-               j++;
-            }
-
-            i++;
-            Console.WriteLine();
-         }
-      }
-
-      public static void InputArrayString(string[] inputArray)
-      {
-         Console.WriteLine("Одномерный массив строк:");
-         int i = 0;
-         while (i < inputArray.Length)
-         {
-            Console.Write(inputArray[i]);
-            i++;
-         }
-
-         Console.WriteLine();
-      }
-
-      public static string[] OutputArrayString(double[,] inputArray)
+public static string[] OutputArrayString(double[,] inputArray)
       {
          // Объединение двумерного массива double[]
          // в одномерный массив строк string[] для записи в файл
@@ -401,5 +362,46 @@ namespace Homework_6._2
          string filePath = AppContext.BaseDirectory + nameFile;
          File.WriteAllLines(filePath, arrayString);
       }
+
+      public static void InputArrayString(string[,] inputArray)
+      {
+         Console.WriteLine("Двумерный массив строк");
+         int i = 0;
+         while (i < inputArray.GetLength(0))
+         {
+            int j = 0;
+            while (j < inputArray.GetLength(1))
+            {
+               if (j == inputArray.GetLength(1) - 1)
+               {
+                  Console.Write(inputArray[i, j]);
+               }
+               else
+               {
+                  Console.Write(inputArray[i, j] + " ");
+               }
+
+               j++;
+            }
+
+            i++;
+            Console.WriteLine();
+         }
+      }
+
+      public static void InputArrayString(string[] inputArray)
+      {
+         Console.WriteLine("Одномерный массив строк:");
+         int i = 0;
+         while (i < inputArray.Length)
+         {
+            Console.Write(inputArray[i]);
+            i++;
+         }
+
+         Console.WriteLine();
+      }
+
+      
    }
 }
