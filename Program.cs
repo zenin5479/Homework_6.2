@@ -34,9 +34,9 @@ namespace Homework_6._2
          Console.WriteLine();
 
          string mostVowels = FindWordWithMostVowels(replaceArray);
-         string text = "Слово с наибольшим количеством гласных:"+ mostVowels;
+         string text = "Слово с наибольшим количеством гласных:" + mostVowels;
          Console.WriteLine(text);
-         FileAppendStringArray(pathIntermediate, text);
+         FileAppendStringArray(pathInput, text);
 
          Console.ReadKey();
       }
@@ -373,7 +373,7 @@ namespace Homework_6._2
          // Создание одномерного массива строк string[] для записи в файл строки
          string[] stringArray = { line };
          // Добавление массива строк в файл
-         File.AppendAllLines(path, stringArray);
+         File.WriteAllLines(path, stringArray);
       }
 
       public static void InputArrayString(string[,] inputArray)
