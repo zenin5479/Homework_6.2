@@ -26,7 +26,7 @@ namespace Homework_6._2
          string[,] enterArray = EnterArrayString(pathEnter);
          Console.WriteLine();
          string oldWord = "один";
-         string newWord = "два";
+         string newWord = "второй";
          string[,] replaceArray = ReplaceWord(enterArray, oldWord, newWord);
          Console.WriteLine();
          string mostVowels = FindWordWithMostVowels(replaceArray);
