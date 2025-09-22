@@ -29,7 +29,7 @@ namespace Homework_6._2
          string newWord = "второй";
          string[,] replaceArray = ReplaceWord(enterArray, oldWord, newWord);
          Console.WriteLine();
-         string[] repArray = OutputArrayString(replaceArray);
+         string[] intermediate = OutputArrayString(replaceArray);
          Console.WriteLine();
 
          string mostVowels = FindWordWithMostVowels(replaceArray);
