@@ -35,8 +35,6 @@ namespace Homework_6._2
          Console.ReadKey();
       }
 
-
-
       public static string[,] EnterArrayString(string path)
       {
          // Одномерный массив строк
