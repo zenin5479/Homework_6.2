@@ -373,8 +373,7 @@ namespace Homework_6._2
          // Создание одномерного массива строк string[] для записи в файл строки
          string[] stringArray = { line };
          // Добавление массива строк в файл
-         string filePath = AppContext.BaseDirectory + nameFile;
-         File.AppendAllLines(filePath, stringArray);
+         File.AppendAllLines(path, stringArray);
       }
 
       public static void InputArrayString(string[,] inputArray)
