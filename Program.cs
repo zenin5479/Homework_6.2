@@ -35,89 +35,7 @@ namespace Homework_6._2
          Console.ReadKey();
       }
 
-      public static string FindWordWithMostVowels(string[,] words)
-      {
-         // Вариант 1
-         char[] vowels = { 'а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я', 'А', 'Е', 'Ё', 'И', 'О', 'У', 'Ы', 'Э', 'Ю', 'Я' };
-         // Вариант 2
-         //char[] vowels = { 'а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я' };
-         string mostWord = "";
-         int countMaxVowel = -1;
-         int i = 0;
-         while (i < words.GetLength(0))
-         {
-            int j = 0;
-            while (j < words.GetLength(1))
-            {
-               if (words[i, j] != null)
-               {
-                  //Console.WriteLine(words[i, j]);
-                  int countVowel = 0;
-                  int k = 0;
-                  while (k < words[i, j].Length)
-                  {
-                     string partString = words[i, j][k].ToString();
-                     int l = 0;
-                     while (l < vowels.Length)
-                     {
-                        // Вариант 1
-                        // Сравниваем значения string используя оператор == с учетом регистра
-                        if (vowels[l].ToString() == partString)
-                        {
-                           countVowel++;
-                        }
-
-                        // Вариант 1
-                        // Сравниваем значения string используя метод String.CompareOrdinal с учетом регистра и текущей культуры
-                        //if (string.CompareOrdinal(vowels[l].ToString(), partString) == 0)
-                        //{
-                        //   countVowel++;
-                        //}
-
-                        // Вариант 2
-                        // Сравниваем значения string используя метод Compare игнорируя регистр
-                        //if (string.Compare(vowels[l].ToString(), partString, StringComparison.OrdinalIgnoreCase) == 0)
-                        //{
-                        //   countVowel++;
-                        //}
-
-                        // Вариант 1
-                        // Сравниваем значения string используя метод Equals(string) с учетом регистра
-                        //if (Equals(vowels[l].ToString(), partString))
-                        //{
-                        //   countVowel++;
-                        //}
-
-                        // Вариант 2
-                        // Сравниваем значения string используя метод Equals(string) игнорируя регистр
-                        //if (string.Equals(vowels[l].ToString(), partString, StringComparison.OrdinalIgnoreCase))
-                        //{
-                        //   countVowel++;
-                        //}
-
-                        l++;
-                     }
-
-                     k++;
-                  }
-
-                  //Console.WriteLine(countVowel);
-
-                  if (countVowel > countMaxVowel)
-                  {
-                     countMaxVowel = countVowel;
-                     mostWord = words[i, j];
-                  }
-               }
-
-               j++;
-            }
-
-            i++;
-         }
-
-         return mostWord;
-      }
+      
 
       public static string[,] EnterArrayString(string path)
       {
@@ -315,6 +233,90 @@ namespace Homework_6._2
          }
 
          return arrayString;
+      }
+
+public static string FindWordWithMostVowels(string[,] words)
+      {
+         // Вариант 1
+         char[] vowels = { 'а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я', 'А', 'Е', 'Ё', 'И', 'О', 'У', 'Ы', 'Э', 'Ю', 'Я' };
+         // Вариант 2
+         //char[] vowels = { 'а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я' };
+         string mostWord = "";
+         int countMaxVowel = -1;
+         int i = 0;
+         while (i < words.GetLength(0))
+         {
+            int j = 0;
+            while (j < words.GetLength(1))
+            {
+               if (words[i, j] != null)
+               {
+                  //Console.WriteLine(words[i, j]);
+                  int countVowel = 0;
+                  int k = 0;
+                  while (k < words[i, j].Length)
+                  {
+                     string partString = words[i, j][k].ToString();
+                     int l = 0;
+                     while (l < vowels.Length)
+                     {
+                        // Вариант 1
+                        // Сравниваем значения string используя оператор == с учетом регистра
+                        if (vowels[l].ToString() == partString)
+                        {
+                           countVowel++;
+                        }
+
+                        // Вариант 1
+                        // Сравниваем значения string используя метод String.CompareOrdinal с учетом регистра и текущей культуры
+                        //if (string.CompareOrdinal(vowels[l].ToString(), partString) == 0)
+                        //{
+                        //   countVowel++;
+                        //}
+
+                        // Вариант 2
+                        // Сравниваем значения string используя метод Compare игнорируя регистр
+                        //if (string.Compare(vowels[l].ToString(), partString, StringComparison.OrdinalIgnoreCase) == 0)
+                        //{
+                        //   countVowel++;
+                        //}
+
+                        // Вариант 1
+                        // Сравниваем значения string используя метод Equals(string) с учетом регистра
+                        //if (Equals(vowels[l].ToString(), partString))
+                        //{
+                        //   countVowel++;
+                        //}
+
+                        // Вариант 2
+                        // Сравниваем значения string используя метод Equals(string) игнорируя регистр
+                        //if (string.Equals(vowels[l].ToString(), partString, StringComparison.OrdinalIgnoreCase))
+                        //{
+                        //   countVowel++;
+                        //}
+
+                        l++;
+                     }
+
+                     k++;
+                  }
+
+                  //Console.WriteLine(countVowel);
+
+                  if (countVowel > countMaxVowel)
+                  {
+                     countMaxVowel = countVowel;
+                     mostWord = words[i, j];
+                  }
+               }
+
+               j++;
+            }
+
+            i++;
+         }
+
+         return mostWord;
       }
 
       public static void InputArrayString(string[,] inputArray)
