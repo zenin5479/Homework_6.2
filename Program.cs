@@ -368,7 +368,7 @@ namespace Homework_6._2
          File.WriteAllLines(path, arrayString);
       }
 
-      public static void FileAppendStringArray(string name, string line)
+      public static void FileAppendStringArray(string path, string line)
       {
          // Создание одномерного массива строк string[] для записи в файл строки
          string[] stringArray = { line };
