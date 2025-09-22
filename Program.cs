@@ -401,7 +401,5 @@ namespace Homework_6._2
 
          Console.WriteLine();
       }
-
-
    }
 }
