@@ -317,7 +317,7 @@ namespace Homework_6._2
          return mostWord;
       }
 
-public static string[] OutputArrayString(double[,] inputArray)
+      public static string[] OutputArrayString(double[,] inputArray)
       {
          // Объединение двумерного массива double[]
          // в одномерный массив строк string[] для записи в файл
@@ -402,6 +402,6 @@ public static string[] OutputArrayString(double[,] inputArray)
          Console.WriteLine();
       }
 
-      
+
    }
 }
