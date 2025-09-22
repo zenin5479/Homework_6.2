@@ -369,7 +369,14 @@ namespace Homework_6._2
          File.WriteAllLines(path, arrayString);
       }
 
-
+      public static void FileAppendStringArray(string line, string nameFile)
+      {
+         // Создание одномерного массива строк string[] для записи в файл строки
+         string[] stringArray = { line };
+         // Добавление массива строк в файл
+         string filePath = AppContext.BaseDirectory + nameFile;
+         File.AppendAllLines(filePath, stringArray);
+      }
 
       public static void InputArrayString(string[,] inputArray)
       {
