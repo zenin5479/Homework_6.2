@@ -29,6 +29,9 @@ namespace Homework_6._2
          string newWord = "второй";
          string[,] replaceArray = ReplaceWord(enterArray, oldWord, newWord);
          Console.WriteLine();
+         string[] repArray = OutputArrayString(replaceArray);
+         Console.WriteLine();
+
          string mostVowels = FindWordWithMostVowels(replaceArray);
          Console.WriteLine("Слово с наибольшим количеством гласных: {0}", mostVowels);
 
@@ -317,14 +320,14 @@ namespace Homework_6._2
          return mostWord;
       }
 
-      public static string[] OutputArrayString(double[,] inputArray)
+      public static string[] OutputArrayString(string[,] inputArray)
       {
-         // Объединение двумерного массива double[]
+         // Объединение двумерного массива string[,]
          // в одномерный массив строк string[] для записи в файл
-         //Console.WriteLine("Одномерный массив строк");
+         Console.WriteLine("Одномерный массив строк");
          StringBuilder stringModified = new StringBuilder();
          string[] arrayString = new string[inputArray.GetLength(0)];
-         string subLine;
+         string subLine = "";
          int row = 0;
          while (row < inputArray.GetLength(0))
          {
@@ -347,7 +350,7 @@ namespace Homework_6._2
                column++;
             }
 
-            //Console.WriteLine(subLine);
+            Console.WriteLine(subLine);
             stringModified.Clear();
             row++;
          }
