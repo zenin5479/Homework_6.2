@@ -40,7 +40,5 @@ namespace Homework_6._2
 
          Console.ReadKey();
       }
-
-      
    }
 }
