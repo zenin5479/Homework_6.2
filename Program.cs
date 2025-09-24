@@ -375,18 +375,5 @@ namespace Homework_6._2
          // Добавление массива строк в файл
          File.WriteAllLines(path, stringArray);
       }
-
-      public static void InputArrayString(string[] inputArray)
-      {
-         Console.WriteLine("Одномерный массив строк:");
-         int i = 0;
-         while (i < inputArray.Length)
-         {
-            Console.Write(inputArray[i]);
-            i++;
-         }
-
-         Console.WriteLine();
-      }
    }
 }
