@@ -376,32 +376,6 @@ namespace Homework_6._2
          File.WriteAllLines(path, stringArray);
       }
 
-      public static void InputArrayString(string[,] inputArray)
-      {
-         Console.WriteLine("Двумерный массив строк");
-         int i = 0;
-         while (i < inputArray.GetLength(0))
-         {
-            int j = 0;
-            while (j < inputArray.GetLength(1))
-            {
-               if (j == inputArray.GetLength(1) - 1)
-               {
-                  Console.Write(inputArray[i, j]);
-               }
-               else
-               {
-                  Console.Write(inputArray[i, j] + " ");
-               }
-
-               j++;
-            }
-
-            i++;
-            Console.WriteLine();
-         }
-      }
-
       public static void InputArrayString(string[] inputArray)
       {
          Console.WriteLine("Одномерный массив строк:");
