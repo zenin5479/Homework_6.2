@@ -1,6 +1,6 @@
-﻿using System.Text;
-using System;
+﻿using System;
 using System.IO;
+using System.Text;
 
 namespace Homework_6._2
 {
