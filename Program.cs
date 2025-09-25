@@ -1,6 +1,6 @@
-﻿using System;
+﻿using LibraryForStrings;
+using System;
 using System.IO;
-using LibraryForStrings;
 
 // Обработка текста
 // Дан текст. Текст разбит на слова, предполагается, что слово – это группа символов,
