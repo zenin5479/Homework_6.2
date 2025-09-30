@@ -6,10 +6,4 @@
     <RootNamespace>Homework_6._2</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Reference Include="LibraryForStrings">
-      <HintPath>bin\Debug\netcoreapp3.1\LibraryForStrings.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
 </Project>
