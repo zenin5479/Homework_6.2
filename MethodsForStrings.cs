@@ -340,13 +340,5 @@ namespace Homework_6._2
          // Запись массива строк в файл
          File.WriteAllLines(path, stringArray);
       }
-
-      public static void FileAppendStringArray(string path, string line)
-      {
-         // Создание одномерного массива строк string[] для записи в файл строки
-         string[] stringArray = { line };
-         // Добавление массива строк в файл
-         File.AppendAllLines(path, stringArray);
-      }
    }
 }
