@@ -14,7 +14,7 @@ namespace Homework_6._2
 {
    internal class Program
    {
-      static void Main(string[] args)
+      static void Main()
       {
          string fileEnter = "parable.txt";
          string pathEnter = Path.GetFullPath(fileEnter);
