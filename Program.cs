@@ -1,5 +1,4 @@
-﻿using LibraryForStrings;
-using System;
+﻿using System;
 using System.IO;
 
 // Обработка текста
@@ -23,20 +22,20 @@ namespace Homework_6._2
          string fileInput = "finish.txt";
          string pathInput = Path.GetFullPath(fileInput);
 
-         string[,] enterArray = VariousMethods.EnterArrayString(pathEnter);
+         string[,] enterArray = MethodsForStrings.EnterArrayString(pathEnter);
          Console.WriteLine();
          string oldWord = "один";
          string newWord = "второй";
-         string[,] replaceArray = VariousMethods.ReplaceWord(enterArray, oldWord, newWord);
+         string[,] replaceArray = MethodsForStrings.ReplaceWord(enterArray, oldWord, newWord);
          Console.WriteLine();
-         string[] intermediate = VariousMethods.OutputArrayString(replaceArray);
-         VariousMethods.FileWriteArrayString(pathIntermediate, intermediate, intermediateFile);
+         string[] intermediate = MethodsForStrings.OutputArrayString(replaceArray);
+         MethodsForStrings.FileWriteArrayString(pathIntermediate, intermediate, intermediateFile);
          Console.WriteLine();
 
-         string mostVowels = VariousMethods.FindWordWithMostVowels(replaceArray);
+         string mostVowels = MethodsForStrings.FindWordWithMostVowels(replaceArray);
          string inputVowels = "Слово с наибольшим количеством гласных: " + mostVowels;
          Console.WriteLine(inputVowels);
-         VariousMethods.FileWriteArrayString(pathInput, inputVowels);
+         MethodsForStrings.FileWriteArrayString(pathInput, inputVowels);
 
          Console.ReadKey();
       }

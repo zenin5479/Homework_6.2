@@ -2,9 +2,9 @@
 using System.IO;
 using System.Text;
 
-namespace LibraryForStrings
+namespace Homework_6._2
 {
-   public class VariousMethods
+   public class MethodsForStrings
    {
       public static string[,] EnterArrayString(string path)
       {
